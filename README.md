@@ -1,5 +1,5 @@
 # Ecumaster black race dash
-![can_display_irl](can_display_irl.png)   
+![can_display_irl](can_display_irl_1.png)   
 How it looks.   
 
 ![touchgfx_example_view](touchgfx_can_display_ex.png)   
