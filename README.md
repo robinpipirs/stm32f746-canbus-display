@@ -1,9 +1,9 @@
 # Ecumaster black race dash
-![can_display_irl](can_display_irl.png)
-How it looks.
+![can_display_irl](can_display_irl.png)   
+How it looks.   
 
-![touchgfx_example_view](touchgfx_can_display_ex.png)
-How it looks in TouchGFX.
+![touchgfx_example_view](touchgfx_can_display_ex.png)   
+How it looks in TouchGFX.   
 
 This project is built on the stm32f746g-discovery board.
 It was intended to be an diy solution to a race dash.
