@@ -1,0 +1,22 @@
+Font.hpp:193:13:touchgfx::Font::~Font()	16	static
+Font.hpp:193:13:virtual touchgfx::Font::~Font()	16	static
+Font.hpp:230:30:virtual const touchgfx::GlyphNode* touchgfx::Font::getGlyph(touchgfx::Unicode::UnicodeChar) const	40	static
+Font.hpp:249:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getFallbackChar() const	16	static
+Font.hpp:264:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getEllipsisChar() const	16	static
+Font.hpp:373:22:virtual uint16_t touchgfx::Font::getFontHeight() const	16	static
+Font.hpp:389:22:virtual uint16_t touchgfx::Font::getMinimumTextHeight() const	16	static
+Font.hpp:403:21:virtual uint8_t touchgfx::Font::getBitsPerPixel() const	16	static
+Font.hpp:417:21:virtual uint8_t touchgfx::Font::getDataFormatA4() const	16	static
+ConstFont.hpp:37:7:touchgfx::ConstFont::~ConstFont()	16	static
+ConstFont.hpp:37:7:virtual touchgfx::ConstFont::~ConstFont()	16	static
+GeneratedFont.hpp:22:7:touchgfx::GeneratedFont::~GeneratedFont()	16	static
+GeneratedFont.hpp:22:7:virtual touchgfx::GeneratedFont::~GeneratedFont()	16	static
+FontCache.hpp:45:34:static const uint8_t* touchgfx::FontCache::getPixelData(const touchgfx::GlyphNode*)	16	static
+FontCache.hpp:49:24:static bool touchgfx::FontCache::isCached(const touchgfx::GlyphNode*)	16	static
+CachedFont.hpp:50:29:virtual const uint16_t* touchgfx::CachedFont::getGSUBTable() const	16	static
+CachedFont.hpp:59:18:virtual void touchgfx::CachedFont::setGSUBTable(const uint16_t*)	16	static
+CachedFont.cpp:8:16:virtual const uint8_t* touchgfx::CachedFont::getPixelData(const touchgfx::GlyphNode*) const	24	static
+CachedFont.cpp:22:18:virtual const touchgfx::GlyphNode* touchgfx::CachedFont::getGlyph(touchgfx::Unicode::UnicodeChar, const uint8_t*&, uint8_t&) const	32	static
+CachedFont.cpp:53:8:virtual int8_t touchgfx::CachedFont::getKerning(touchgfx::Unicode::UnicodeChar, const touchgfx::GlyphNode*) const	24	static
+CachedFont.hpp:12:7:touchgfx::CachedFont::~CachedFont()	16	static
+CachedFont.hpp:12:7:virtual touchgfx::CachedFont::~CachedFont()	16	static

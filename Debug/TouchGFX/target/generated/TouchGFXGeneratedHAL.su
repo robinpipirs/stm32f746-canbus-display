@@ -1,0 +1,34 @@
+HAL.hpp:103:13:touchgfx::HAL::~HAL()	16	static
+HAL.hpp:103:13:virtual touchgfx::HAL::~HAL()	16	static
+HAL.hpp:116:17:static touchgfx::HAL* touchgfx::HAL::getInstance()	4	static
+HAL.hpp:134:18:virtual void touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)	16	static
+HAL.hpp:237:10:void touchgfx::HAL::frontPorchEntered()	16	static
+HAL.hpp:297:17:static touchgfx::LCD& touchgfx::HAL::lcd()	4	static
+HAL.hpp:331:10:void touchgfx::HAL::lockDMAToFrontPorch(bool)	16	static
+HAL.hpp:362:28:virtual touchgfx::BlitOperations touchgfx::HAL::getBlitCaps()	16	static
+HAL.hpp:661:10:void touchgfx::HAL::vSync()	16	static
+HAL.hpp:674:18:virtual void touchgfx::HAL::backPorchExited()	16	static
+HAL.hpp:730:18:virtual bool touchgfx::HAL::sampleKey(uint8_t&)	16	static
+HAL.hpp:776:18:virtual void touchgfx::HAL::setFrameBufferStartAddress(void*, uint16_t, bool, bool)	56	static
+HAL.hpp:821:18:virtual void touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)	24	static
+HAL.hpp:1102:10:bool touchgfx::HAL::setFrameRefreshStrategy(touchgfx::HAL::FrameRefreshStrategy)	16	static
+HAL.hpp:1157:10:void touchgfx::HAL::registerTaskDelayFunction(void (*)(uint16_t))	16	static
+HAL.hpp:1175:18:virtual void touchgfx::HAL::taskDelay(uint16_t)	16	static
+HAL.hpp:1219:21:virtual touchgfx::DMAType touchgfx::HAL::getDMAType()	16	static
+HAL.hpp:1364:18:virtual void touchgfx::HAL::performDisplayOrientationChange()	16	static
+TouchGFXGeneratedHAL.hpp:103:18:virtual void TouchGFXGeneratedHAL::flushFrameBuffer()	16	static
+core_cm7.h:1896:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static
+core_cm7.h:1932:22:void __NVIC_DisableIRQ(IRQn_Type)	16	static,ignoring_inline_asm
+core_cm7.h:2024:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	16	static
+TouchGFXGeneratedHAL.cpp:30:6:void TouchGFXGeneratedHAL::initialize()	24	static
+TouchGFXGeneratedHAL.cpp:48:6:virtual void TouchGFXGeneratedHAL::configureInterrupts()	16	static
+TouchGFXGeneratedHAL.cpp:54:6:virtual void TouchGFXGeneratedHAL::enableInterrupts()	16	static
+TouchGFXGeneratedHAL.cpp:60:6:virtual void TouchGFXGeneratedHAL::disableInterrupts()	16	static
+TouchGFXGeneratedHAL.cpp:66:6:virtual void TouchGFXGeneratedHAL::enableLCDControllerInterrupt()	16	static
+TouchGFXGeneratedHAL.cpp:77:11:virtual uint16_t* TouchGFXGeneratedHAL::getTFTFrameBuffer() const	16	static
+TouchGFXGeneratedHAL.cpp:82:6:virtual void TouchGFXGeneratedHAL::setTFTFrameBuffer(uint16_t*)	16	static
+TouchGFXGeneratedHAL.cpp:90:6:virtual void TouchGFXGeneratedHAL::flushFrameBuffer(const touchgfx::Rect&)	16	static
+TouchGFXGeneratedHAL.cpp:95:10:virtual uint16_t TouchGFXGeneratedHAL::getTFTCurrentLine()	24	static
+TouchGFXGeneratedHAL.cpp:118:10:void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef*)	16	static
+TouchGFXGeneratedHAL.hpp:28:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
+TouchGFXGeneratedHAL.hpp:28:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static

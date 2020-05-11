@@ -1,0 +1,4 @@
+TypedText.hpp:198:17:static void touchgfx::TypedText::registerTypedTextDatabase(const touchgfx::TypedText::TypedTextData*, const touchgfx::Font* const*, uint16_t)	24	static
+Texts.cpp:56:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	32	static
+Texts.cpp:86:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	16	static
+Texts.cpp:91:39:const UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	16	static

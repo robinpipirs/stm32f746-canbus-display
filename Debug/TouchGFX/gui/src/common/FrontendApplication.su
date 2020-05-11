@@ -1,0 +1,27 @@
+UIEventListener.hpp:52:18:virtual void touchgfx::UIEventListener::handleClickEvent(const touchgfx::ClickEvent&)	16	static
+UIEventListener.hpp:65:18:virtual void touchgfx::UIEventListener::handleDragEvent(const touchgfx::DragEvent&)	16	static
+UIEventListener.hpp:78:18:virtual void touchgfx::UIEventListener::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
+UIEventListener.hpp:92:18:virtual void touchgfx::UIEventListener::handleKeyEvent(uint8_t)	16	static
+UIEventListener.hpp:104:18:virtual void touchgfx::UIEventListener::handleTickEvent()	16	static
+UIEventListener.hpp:115:18:virtual void touchgfx::UIEventListener::handlePendingScreenTransition()	16	static
+UIEventListener.hpp:126:13:touchgfx::UIEventListener::~UIEventListener()	16	static
+UIEventListener.hpp:126:13:virtual touchgfx::UIEventListener::~UIEventListener()	16	static
+Application.hpp:96:18:virtual void touchgfx::Application::appSwitchScreen(uint8_t)	16	static
+Callback.hpp:235:13:touchgfx::GenericCallback<void>::~GenericCallback()	16	static
+Callback.hpp:235:13:virtual touchgfx::GenericCallback<void>::~GenericCallback()	16	static
+Application.hpp:44:7:touchgfx::Application::~Application()	16	static
+Application.hpp:44:7:virtual touchgfx::Application::~Application()	16	static
+MVPApplication.hpp:70:13:touchgfx::MVPApplication::~MVPApplication()	16	static
+MVPApplication.hpp:70:13:virtual touchgfx::MVPApplication::~MVPApplication()	16	static
+MVPApplication.hpp:79:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	16	static
+MVPApplication.hpp:97:10:void touchgfx::MVPApplication::evaluatePendingScreenTransition()	16	static
+FrontendApplicationBase.hpp:16:13:FrontendApplicationBase::~FrontendApplicationBase()	16	static
+FrontendApplicationBase.hpp:16:13:virtual FrontendApplicationBase::~FrontendApplicationBase()	16	static
+FrontendApplication.hpp:14:13:FrontendApplication::~FrontendApplication()	16	static
+FrontendApplication.hpp:14:13:virtual FrontendApplication::~FrontendApplication()	16	static
+FrontendApplication.hpp:16:18:virtual void FrontendApplication::handleTickEvent()	16	static
+FrontendApplication.cpp:3:1:FrontendApplication::FrontendApplication(Model&, FrontendHeap&)	24	static
+Callback.hpp:557:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
+Callback.hpp:557:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
+Callback.hpp:595:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
+Callback.hpp:609:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static

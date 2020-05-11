@@ -1,0 +1,26 @@
+HAL.hpp:103:13:touchgfx::HAL::~HAL()	16	static
+HAL.hpp:103:13:virtual touchgfx::HAL::~HAL()	16	static
+HAL.hpp:134:18:virtual void touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)	16	static
+HAL.hpp:297:17:static touchgfx::LCD& touchgfx::HAL::lcd()	4	static
+HAL.hpp:362:28:virtual touchgfx::BlitOperations touchgfx::HAL::getBlitCaps()	16	static
+HAL.hpp:674:18:virtual void touchgfx::HAL::backPorchExited()	16	static
+HAL.hpp:730:18:virtual bool touchgfx::HAL::sampleKey(uint8_t&)	16	static
+HAL.hpp:776:18:virtual void touchgfx::HAL::setFrameBufferStartAddress(void*, uint16_t, bool, bool)	56	static
+HAL.hpp:821:18:virtual void touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)	24	static
+HAL.hpp:1175:18:virtual void touchgfx::HAL::taskDelay(uint16_t)	16	static
+HAL.hpp:1219:21:virtual touchgfx::DMAType touchgfx::HAL::getDMAType()	16	static
+HAL.hpp:1364:18:virtual void touchgfx::HAL::performDisplayOrientationChange()	16	static
+TouchGFXGeneratedHAL.hpp:103:18:virtual void TouchGFXGeneratedHAL::flushFrameBuffer()	16	static
+TouchGFXGeneratedHAL.hpp:28:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
+TouchGFXGeneratedHAL.hpp:28:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
+TouchGFXHAL.hpp:99:18:virtual void TouchGFXHAL::flushFrameBuffer()	16	static
+TouchGFXHAL.cpp:25:6:void TouchGFXHAL::initialize()	16	static
+TouchGFXHAL.cpp:41:11:virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const	16	static
+TouchGFXHAL.cpp:56:6:virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t*)	16	static
+TouchGFXHAL.cpp:73:6:virtual void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect&)	16	static
+TouchGFXHAL.cpp:95:6:virtual void TouchGFXHAL::configureInterrupts()	16	static
+TouchGFXHAL.cpp:108:6:virtual void TouchGFXHAL::enableInterrupts()	16	static
+TouchGFXHAL.cpp:121:6:virtual void TouchGFXHAL::disableInterrupts()	16	static
+TouchGFXHAL.cpp:135:6:virtual void TouchGFXHAL::enableLCDControllerInterrupt()	16	static
+TouchGFXHAL.hpp:31:7:TouchGFXHAL::~TouchGFXHAL()	16	static
+TouchGFXHAL.hpp:31:7:virtual TouchGFXHAL::~TouchGFXHAL()	16	static
