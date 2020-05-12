@@ -31,4 +31,4 @@ Gfx tool: TouchGFX 4.13.0 Designer.
 
 ## Ecumaster emu black settings
 Image bellow shows the can settings used for the display to work with ecumaster.      
-![ecumaster_can_settings](ecumaster_bl_can_settings.png)      
+![ecumaster_can_settings](ecumaster_bl_can_settings_1.png)      
