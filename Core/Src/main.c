@@ -148,7 +148,7 @@ static int oil_press = 0;
 static int iat = 0;
 static int egt = 0;
 static int tps = 0;
-static int batt_v = 0;
+static float batt_v = 0;
 
 extern xQueueHandle messageQ;
 
@@ -164,7 +164,7 @@ typedef struct {
    int    iat;
    int    egt;
    int	  tps;
-   int	  batt_v;
+   float	  batt_v;
 } display_values;
 
 void SecondTask(void const* argument)
@@ -497,14 +497,16 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   if ((RxHeader.StdId == 0x600) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
 	 uint16_t rpm_in = (RxData[0] << 0) | (RxData[1] << 8);
-	 int tps_in = RxData[2]* 0.5;
-	 int iat_in = RxData[3];
+	 uint8_t tps_in = RxData[2];
+	 uint8_t iat_in = RxData[3];
 	 uint16_t map_in = (RxData[4] << 0) | (RxData[7] << 8);
 
-	 rpm = rpm_in;
-	 map = map_in;
-	 iat = iat_in;
-	 tps = tps_in;
+	 rpm = (int)rpm_in;
+	 map = ((int)map_in*1.0f);
+	 iat = (int)iat_in;
+	 tps = (int)(((float)tps_in)*0.5f);
+	 (void)map;
+	 (void)iat;
   }
 
   if ((RxHeader.StdId == 0x602) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
@@ -516,26 +518,26 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	 uint8_t fuel_press_in = RxData[5];
 	 uint16_t clt_in = (RxData[6] << 0) | (RxData[7] << 8);
 
-	 vehicle_spd = vehicle_spd_in;
-	 oil_tmp = oil_tmp_in;
-	 oil_press = oil_press_in;
-	 clt = clt_in;
+	 vehicle_spd = ((int)vehicle_spd_in)*1;
+	 oil_tmp = ((int)oil_tmp_in) * 1;
+	 oil_press = ((int)oil_press_in) * 0.0625f;
+	 clt = ((int)clt_in) * 1;
   }
 
   if ((RxHeader.StdId == 0x603) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
 	 uint8_t lambda_in = RxData[2];
-
-	 uint8_t egt_1_in = RxData[4];
-
-	 lambda = lambda_in;
-	 egt = egt_1_in;
+	 uint16_t egt_1_in = (RxData[4] << 0) | (RxData[5] << 8);
+	 lambda = ((float)lambda_in)*0.0078125f;
+	 egt = (int)egt_1_in;
    }
 
   if ((RxHeader.StdId == 0x604) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
 	 uint16_t batt_in = (RxData[2] << 0) | (RxData[3] << 8);
-	 batt_v = batt_in;
+	 float battery_voltage = ((float)batt_in)*0.027f;
+	 batt_v = battery_voltage;
+	 (void)batt_v;
   }
 
   if ((RxHeader.StdId == 0x500) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))

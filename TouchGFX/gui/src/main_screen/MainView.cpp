@@ -32,7 +32,7 @@ typedef struct {
    int    iat;
    int    egt;
    int	  tps;
-   int	  batt_v;
+   float	  batt_v;
 } display_values;
 
 void MainView::updateVal(uint8_t* newValue)
@@ -46,13 +46,13 @@ void MainView::updateVal(uint8_t* newValue)
 	RPMValue.resizeToCurrentText();
 	RPMValue.invalidate();
 
-	Unicode::snprintf(KpaValueBuffer, KPAVALUE_SIZE, "%d", values->map);
-	KpaValue.resizeToCurrentText();
-	KpaValue.invalidate();
+	Unicode::snprintf(MAPValueBuffer, MAPVALUE_SIZE, "%d", values->map);
+	MAPValue.resizeToCurrentText();
+	MAPValue.invalidate();
 
-	Unicode::snprintf(CltValueBuffer, CLTVALUE_SIZE, "%d", values->clt);
-	CltValue.resizeToCurrentText();
-	CltValue.invalidate();
+	Unicode::snprintf(CLTValueBuffer, CLTVALUE_SIZE, "%d", values->clt);
+	CLTValue.resizeToCurrentText();
+	CLTValue.invalidate();
 
 	Unicode::snprintfFloat(LambdaValueBuffer, LAMBDAVALUE_SIZE, "%.2f",values->lambda);
 	LambdaValue.resizeToCurrentText();
@@ -62,9 +62,9 @@ void MainView::updateVal(uint8_t* newValue)
 	TrgtValue.resizeToCurrentText();
 	TrgtValue.invalidate();
 
-	Unicode::snprintf(KmhValueBuffer, KMHVALUE_SIZE, "%d",values->vehicle_spd);
-	KmhValue.resizeToCurrentText();
-	KmhValue.invalidate();
+	Unicode::snprintf(KMHValueBuffer, KMHVALUE_SIZE, "%d",values->vehicle_spd);
+	KMHValue.resizeToCurrentText();
+	KMHValue.invalidate();
 
 	Unicode::snprintf(OILPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%d",values->oil_press);
 	OILPressureValue.resizeToCurrentText();

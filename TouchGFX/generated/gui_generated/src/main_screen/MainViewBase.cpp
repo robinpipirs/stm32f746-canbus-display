@@ -19,12 +19,12 @@ MainViewBase::MainViewBase()
     RpmDescriptor.setLinespacing(0);
     RpmDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
 
-    KpaDescriptor.setXY(428, 121);
+    KpaDescriptor.setXY(428, 126);
     KpaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     KpaDescriptor.setLinespacing(0);
     KpaDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
 
-    CltDecsriptor.setXY(346, 121);
+    CltDecsriptor.setXY(346, 126);
     CltDecsriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     CltDecsriptor.setLinespacing(0);
     CltDecsriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID40));
@@ -54,30 +54,6 @@ MainViewBase::MainViewBase()
     TrgtValue.setWildcard(TrgtValueBuffer);
     TrgtValue.resizeToCurrentText();
     TrgtValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID7));
-
-    KpaValue.setXY(414, 86);
-    KpaValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    KpaValue.setLinespacing(0);
-    Unicode::snprintf(KpaValueBuffer, KPAVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID6).getText());
-    KpaValue.setWildcard(KpaValueBuffer);
-    KpaValue.resizeToCurrentText();
-    KpaValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID5));
-
-    CltValue.setXY(331, 86);
-    CltValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    CltValue.setLinespacing(0);
-    Unicode::snprintf(CltValueBuffer, CLTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID4).getText());
-    CltValue.setWildcard(CltValueBuffer);
-    CltValue.resizeToCurrentText();
-    CltValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
-
-    KmhValue.setXY(193, 75);
-    KmhValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    KmhValue.setLinespacing(0);
-    Unicode::snprintf(KmhValueBuffer, KMHVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID2).getText());
-    KmhValue.setWildcard(KmhValueBuffer);
-    KmhValue.resizeToCurrentText();
-    KmhValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
     backgroundImage.setXY(179, 63);
     backgroundImage.setVisible(false);
@@ -250,6 +226,30 @@ MainViewBase::MainViewBase()
     CltValue_1_1.setLinespacing(0);
     CltValue_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID50));
 
+    KMHValue.setXY(192, 69);
+    KMHValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    KMHValue.setLinespacing(0);
+    Unicode::snprintf(KMHValueBuffer, KMHVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID52).getText());
+    KMHValue.setWildcard(KMHValueBuffer);
+    KMHValue.resizeToCurrentText();
+    KMHValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID51));
+
+    CLTValue.setXY(331, 91);
+    CLTValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    CLTValue.setLinespacing(0);
+    Unicode::snprintf(CLTValueBuffer, CLTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID54).getText());
+    CLTValue.setWildcard(CLTValueBuffer);
+    CLTValue.resizeToCurrentText();
+    CLTValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID53));
+
+    MAPValue.setXY(414, 91);
+    MAPValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    MAPValue.setLinespacing(0);
+    Unicode::snprintf(MAPValueBuffer, MAPVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID56).getText());
+    MAPValue.setWildcard(MAPValueBuffer);
+    MAPValue.resizeToCurrentText();
+    MAPValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID55));
+
     add(backgroundBox);
     add(RpmDescriptor);
     add(KpaDescriptor);
@@ -258,9 +258,6 @@ MainViewBase::MainViewBase()
     add(TrgtDescriptor);
     add(LambdaValue);
     add(TrgtValue);
-    add(KpaValue);
-    add(CltValue);
-    add(KmhValue);
     add(backgroundImage);
     add(rpm1);
     add(rpm2);
@@ -289,6 +286,9 @@ MainViewBase::MainViewBase()
     add(RPMProgressBar);
     add(RPMValue);
     add(CltValue_1_1);
+    add(KMHValue);
+    add(CLTValue);
+    add(MAPValue);
 }
 
 void MainViewBase::setupScreen()

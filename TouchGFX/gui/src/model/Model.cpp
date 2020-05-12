@@ -17,7 +17,7 @@ typedef struct {
    int    iat;
    int    egt;
    int	  tps;
-   int	  batt_v;
+   float	  batt_v;
 } display_values;
 
 uint8_t values[sizeof(display_values)];
