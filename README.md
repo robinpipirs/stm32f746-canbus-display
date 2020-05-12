@@ -1,5 +1,5 @@
 # Ecumaster black race dash
-![can_display_irl](can_display_irl_2.png)   
+![can_display_irl](can_display_irl_2.jpg)   
 Application running on STM32F746G.
 \
 \
