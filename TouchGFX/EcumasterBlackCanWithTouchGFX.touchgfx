@@ -23,58 +23,21 @@
             "Moveable": false
           },
           {
-            "FileNameProgress": "__designer\\Blue_ProgressIndicators_fill_large_circle_indicator_fill_line_full.png",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 92,
-            "CenterY": 92,
-            "Radius": 82,
-            "LineWidth": 30,
-            "StartAngle": 240,
-            "EndAngle": 440,
-            "CapPrecision": "Butt",
-            "Alpha": 255,
-            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_large_circle_indicator_bg_line_full.png",
-            "IndicatorPositionX": 0,
-            "IndicatorPositionY": 0,
-            "IndicatorPositionWidth": 0,
-            "IndicatorPositionHeight": 0,
-            "ProgressRangeMin": 0,
-            "ProgressRangeMax": 6500,
-            "ProgressRangeSteps": 100,
-            "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 6500,
-            "Name": "circleProgress1",
-            "X": 9,
-            "Y": 126,
-            "Width": 184,
-            "Height": 184,
-            "Type": "CircleProgress",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "RpmDescr",
+            "TextId": "SingleUseId21",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 220,
+              "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "RpmDescriptor",
-            "X": 83,
-            "Y": 229,
-            "Width": 36,
-            "Height": 23,
+            "X": 228,
+            "Y": 130,
+            "Width": 26,
+            "Height": 14,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -83,21 +46,21 @@
             "Moveable": false
           },
           {
-            "TextId": "KpaDescr",
+            "TextId": "SingleUseId41",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 220,
+              "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "KpaDescriptor",
-            "X": 420,
-            "Y": 159,
-            "Width": 33,
-            "Height": 23,
+            "X": 428,
+            "Y": 113,
+            "Width": 21,
+            "Height": 14,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -106,21 +69,21 @@
             "Moveable": false
           },
           {
-            "TextId": "CltDescr",
+            "TextId": "SingleUseId40",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 220,
+              "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "CltDecsriptor",
-            "X": 340,
-            "Y": 159,
-            "Width": 22,
-            "Height": 23,
+            "X": 346,
+            "Y": 113,
+            "Width": 19,
+            "Height": 14,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -129,21 +92,21 @@
             "Moveable": false
           },
           {
-            "TextId": "LambDescr",
+            "TextId": "SingleUseId33",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 220,
+              "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "LambdaDescriptor",
-            "X": 324,
-            "Y": 74,
-            "Width": 49,
-            "Height": 23,
+            "X": 38,
+            "Y": 118,
+            "Width": 33,
+            "Height": 14,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -152,21 +115,21 @@
             "Moveable": false
           },
           {
-            "TextId": "TrgtDescr",
+            "TextId": "SingleUseId32",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 220,
+              "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "TrgtDescriptor",
-            "X": 420,
-            "Y": 74,
-            "Width": 32,
-            "Height": 23,
+            "X": 119,
+            "Y": 118,
+            "Width": 31,
+            "Height": 14,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -178,8 +141,8 @@
             "TextId": "SingleUseId9",
             "TextRotation": "0",
             "Color": {
-              "Red": 54,
-              "Green": 112,
+              "Red": 255,
+              "Green": 255,
               "Blue": 255
             },
             "Alpha": 255,
@@ -191,8 +154,8 @@
               "BufferSize": 5
             },
             "Name": "LambdaValue",
-            "X": 324,
-            "Y": 39,
+            "X": 27,
+            "Y": 83,
             "Width": 54,
             "Height": 35,
             "Type": "TextArea",
@@ -206,8 +169,8 @@
             "TextId": "SingleUseId7",
             "TextRotation": "0",
             "Color": {
-              "Red": 54,
-              "Green": 112,
+              "Red": 255,
+              "Green": 255,
               "Blue": 255
             },
             "Alpha": 255,
@@ -219,8 +182,8 @@
               "BufferSize": 5
             },
             "Name": "TrgtValue",
-            "X": 409,
-            "Y": 39,
+            "X": 107,
+            "Y": 83,
             "Width": 54,
             "Height": 35,
             "Type": "TextArea",
@@ -234,8 +197,8 @@
             "TextId": "SingleUseId5",
             "TextRotation": "0",
             "Color": {
-              "Red": 54,
-              "Green": 112,
+              "Red": 255,
+              "Green": 255,
               "Blue": 255
             },
             "Alpha": 255,
@@ -247,8 +210,8 @@
               "BufferSize": 5
             },
             "Name": "KpaValue",
-            "X": 412,
-            "Y": 124,
+            "X": 414,
+            "Y": 78,
             "Width": 48,
             "Height": 35,
             "Type": "TextArea",
@@ -262,8 +225,8 @@
             "TextId": "SingleUseId3",
             "TextRotation": "0",
             "Color": {
-              "Red": 54,
-              "Green": 112,
+              "Red": 255,
+              "Green": 255,
               "Blue": 255
             },
             "Alpha": 255,
@@ -275,8 +238,8 @@
               "BufferSize": 5
             },
             "Name": "CltValue",
-            "X": 327,
-            "Y": 124,
+            "X": 331,
+            "Y": 78,
             "Width": 48,
             "Height": 35,
             "Type": "TextArea",
@@ -302,11 +265,11 @@
               "UseBuffer": true,
               "BufferSize": 5
             },
-            "Name": "RpmValue",
-            "X": 58,
-            "Y": 183,
-            "Width": 86,
-            "Height": 46,
+            "Name": "KmhValue",
+            "X": 193,
+            "Y": 67,
+            "Width": 96,
+            "Height": 69,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -328,6 +291,627 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2,
+            "Alpha": 255,
+            "Name": "boxWithBorder1",
+            "X": 16,
+            "Y": 8,
+            "Width": 452,
+            "Height": 32,
+            "Type": "BoxWithBorder",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Direction": "Right",
+            "Alpha": 255,
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 450,
+            "IndicatorPositionHeight": 28,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 10000,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 10000,
+            "Name": "rpmProgress",
+            "X": 16,
+            "Y": 9,
+            "Width": 450,
+            "Height": 28,
+            "Type": "BoxProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId11",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm1",
+            "X": 59,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId12",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm2",
+            "X": 104,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId13",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm3",
+            "X": 148,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId14",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm4",
+            "X": 193,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId15",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm5",
+            "X": 239,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId16",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm6",
+            "X": 284,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId17",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm7",
+            "X": 328,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId18",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm8",
+            "X": 373,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm9",
+            "X": 418,
+            "Y": 41,
+            "Width": 6,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId20",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rpm10",
+            "X": 460,
+            "Y": 41,
+            "Width": 13,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId30",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "IATDescriptor",
+            "X": 46,
+            "Y": 180,
+            "Width": 17,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId31",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "ECTDescriptor",
+            "X": 124,
+            "Y": 180,
+            "Width": 21,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId22",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId23",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "IATValue",
+            "X": 38,
+            "Y": 145,
+            "Width": 32,
+            "Height": 35,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId24",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId25",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "ECTValue",
+            "X": 107,
+            "Y": 145,
+            "Width": 54,
+            "Height": 35,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId34",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "IATDescriptor_1",
+            "X": 343,
+            "Y": 180,
+            "Width": 24,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "ECTDescriptor_1",
+            "X": 426,
+            "Y": 180,
+            "Width": 25,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId36",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId37",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "OILTempValue",
+            "X": 328,
+            "Y": 145,
+            "Width": 48,
+            "Height": 35,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId38",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId39",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "OILPressureValue",
+            "X": 414,
+            "Y": 145,
+            "Width": 48,
+            "Height": 35,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId42",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "IATDescriptor_1_1",
+            "X": 407,
+            "Y": 240,
+            "Width": 19,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 220,
+              "Blue": 0
+            },
+            "Direction": "Right",
+            "Alpha": 255,
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_small_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 100,
+            "IndicatorPositionHeight": 10,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 60,
+            "Name": "TPSProgress",
+            "X": 365,
+            "Y": 226,
+            "Width": 104,
+            "Height": 14,
+            "Type": "BoxProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "FileNameImage": "",
+            "Alpha": 255,
+            "StartX": 0,
+            "StartY": 5,
+            "EndX": 180,
+            "EndY": 5,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt",
+            "Name": "line10",
+            "X": 14,
+            "Y": 258,
+            "Width": 180,
+            "Height": 10,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "FileNameImage": "",
+            "Alpha": 255,
+            "StartX": 0,
+            "StartY": 5,
+            "EndX": 180,
+            "EndY": 5,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt",
+            "Name": "line10_1",
+            "X": 287,
+            "Y": 258,
+            "Width": 180,
+            "Height": 10,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId44",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId45",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "BatteryVoltage",
+            "X": 225,
+            "Y": 254,
+            "Width": 32,
+            "Height": 14,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [],
@@ -338,42 +922,6 @@
     ],
     "CustomContainerDefinitions": [],
     "TextEntries": [
-      {
-        "TextEntryId": "RpmDescr",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "KpaDescr",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "TrgtDescr",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "LambDescr",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "CltDescr",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "KpaVal",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "TrgtVal",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "LambVal",
-        "IsResource": true
-      },
-      {
-        "TextEntryId": "CltVal",
-        "IsResource": true
-      },
       {
         "TextEntryId": "SingleUseId1",
         "IsResource": false
@@ -412,6 +960,126 @@
       },
       {
         "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId12",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId13",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId14",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId15",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId16",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId17",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId18",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId20",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId21",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId22",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId23",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId24",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId25",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId30",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId31",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId32",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId33",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId34",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId35",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId36",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId37",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId38",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId39",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId40",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId41",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId42",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId44",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId45",
         "IsResource": false
       }
     ],

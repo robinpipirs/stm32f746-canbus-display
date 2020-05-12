@@ -8,11 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/containers/progress_indicators/BoxProgress.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -30,8 +32,6 @@ protected:
      * Member Declarations
      */
     touchgfx::Box backgroundBox;
-    touchgfx::CircleProgress circleProgress1;
-    touchgfx::PainterRGB888Bitmap circleProgress1Painter;
     touchgfx::TextArea RpmDescriptor;
     touchgfx::TextArea KpaDescriptor;
     touchgfx::TextArea CltDecsriptor;
@@ -41,8 +41,35 @@ protected:
     touchgfx::TextAreaWithOneWildcard TrgtValue;
     touchgfx::TextAreaWithOneWildcard KpaValue;
     touchgfx::TextAreaWithOneWildcard CltValue;
-    touchgfx::TextAreaWithOneWildcard RpmValue;
+    touchgfx::TextAreaWithOneWildcard KmhValue;
     touchgfx::Image backgroundImage;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::BoxProgress rpmProgress;
+    touchgfx::TextArea rpm1;
+    touchgfx::TextArea rpm2;
+    touchgfx::TextArea rpm3;
+    touchgfx::TextArea rpm4;
+    touchgfx::TextArea rpm5;
+    touchgfx::TextArea rpm6;
+    touchgfx::TextArea rpm7;
+    touchgfx::TextArea rpm8;
+    touchgfx::TextArea rpm9;
+    touchgfx::TextArea rpm10;
+    touchgfx::TextArea IATDescriptor;
+    touchgfx::TextArea ECTDescriptor;
+    touchgfx::TextAreaWithOneWildcard IATValue;
+    touchgfx::TextAreaWithOneWildcard ECTValue;
+    touchgfx::TextArea IATDescriptor_1;
+    touchgfx::TextArea ECTDescriptor_1;
+    touchgfx::TextAreaWithOneWildcard OILTempValue;
+    touchgfx::TextAreaWithOneWildcard OILPressureValue;
+    touchgfx::TextArea IATDescriptor_1_1;
+    touchgfx::BoxProgress TPSProgress;
+    touchgfx::Line line10;
+    touchgfx::PainterRGB888 line10Painter;
+    touchgfx::Line line10_1;
+    touchgfx::PainterRGB888 line10_1Painter;
+    touchgfx::TextAreaWithOneWildcard BatteryVoltage;
 
     /*
      * Wildcard Buffers
@@ -55,8 +82,18 @@ protected:
     touchgfx::Unicode::UnicodeChar KpaValueBuffer[KPAVALUE_SIZE];
     static const uint16_t CLTVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar CltValueBuffer[CLTVALUE_SIZE];
-    static const uint16_t RPMVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar RpmValueBuffer[RPMVALUE_SIZE];
+    static const uint16_t KMHVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar KmhValueBuffer[KMHVALUE_SIZE];
+    static const uint16_t IATVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar IATValueBuffer[IATVALUE_SIZE];
+    static const uint16_t ECTVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar ECTValueBuffer[ECTVALUE_SIZE];
+    static const uint16_t OILTEMPVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar OILTempValueBuffer[OILTEMPVALUE_SIZE];
+    static const uint16_t OILPRESSUREVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar OILPressureValueBuffer[OILPRESSUREVALUE_SIZE];
+    static const uint16_t BATTERYVOLTAGE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar BatteryVoltageBuffer[BATTERYVOLTAGE_SIZE];
 
 private:
 

@@ -32,12 +32,8 @@ void MainView::updateVal(uint8_t* newValue)
 {
 	display_values* values = (display_values*) newValue;
 
-	Unicode::snprintf(RpmValueBuffer, RPMVALUE_SIZE, "%d", values->rpm);
-	RpmValue.resizeToCurrentText();
-	RpmValue.invalidate();
-
-	circleProgress1.setValue(values->rpm);
-	circleProgress1.invalidate();
+	rpmProgress.setValue(values->rpm);
+	rpmProgress.invalidate();
 
 	Unicode::snprintf(KpaValueBuffer, KPAVALUE_SIZE, "%d", values->map);
 	KpaValue.resizeToCurrentText();
