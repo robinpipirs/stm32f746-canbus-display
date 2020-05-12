@@ -1,5 +1,5 @@
 # Ecumaster black race dash
-![can_display_irl](can_display_irl_2.png)   
+![can_display_irl](can_display_irl_2.jpg)   
 Application running on STM32F746G.
 \
 \
@@ -30,11 +30,5 @@ Gfx tool: TouchGFX 4.13.0 Designer.
 - Do not be afraid to experiment. Have fun!
 
 ## Ecumaster emu black settings
-Bellow images is the can settings used for the display to work with ecumaster.     
+Image bellow shows the can settings used for the display to work with ecumaster.      
 ![ecumaster_can_settings](ecumaster_bl_can_settings.png)      
-
-\
-\
-
-
-![ecumaster_can_userdefines](ecumaster_bl_userdefines.png)
