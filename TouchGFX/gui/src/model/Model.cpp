@@ -11,6 +11,13 @@ typedef struct {
    int    map;
    float  lambda;
    float  lambda_trgt;
+   int	  vehicle_spd;
+   int    oil_tmp;
+   int    oil_press;
+   int    iat;
+   int    egt;
+   int	  tps;
+   int	  batt_v;
 } display_values;
 
 uint8_t values[sizeof(display_values)];

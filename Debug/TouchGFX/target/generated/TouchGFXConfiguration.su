@@ -71,8 +71,8 @@ STM32TouchController.hpp:33:7:virtual STM32TouchController::~STM32TouchControlle
 TouchGFXConfiguration.cpp:61:1:void __static_initialization_and_destruction_0(int, int)	24	static
 Callback.hpp:557:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 Callback.hpp:557:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
-ApplicationFontProvider.hpp:30:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
-ApplicationFontProvider.hpp:30:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
+ApplicationFontProvider.hpp:34:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
+ApplicationFontProvider.hpp:34:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
 Partition.hpp:94:22:uint16_t touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::capacity() const [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
 Partition.hpp:110:22:uint32_t touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::element_size() [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
 Partition.hpp:128:19:void* touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::element(uint16_t) [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::NoTransition, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static

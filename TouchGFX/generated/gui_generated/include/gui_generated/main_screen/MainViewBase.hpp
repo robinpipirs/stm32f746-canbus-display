@@ -11,10 +11,10 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/containers/progress_indicators/BoxProgress.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
+#include <touchgfx/containers/progress_indicators/BoxProgress.hpp>
+#include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -43,8 +43,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard CltValue;
     touchgfx::TextAreaWithOneWildcard KmhValue;
     touchgfx::Image backgroundImage;
-    touchgfx::BoxWithBorder boxWithBorder1;
-    touchgfx::BoxProgress rpmProgress;
     touchgfx::TextArea rpm1;
     touchgfx::TextArea rpm2;
     touchgfx::TextArea rpm3;
@@ -55,10 +53,12 @@ protected:
     touchgfx::TextArea rpm8;
     touchgfx::TextArea rpm9;
     touchgfx::TextArea rpm10;
+    touchgfx::Line line11;
+    touchgfx::PainterRGB888 line11Painter;
     touchgfx::TextArea IATDescriptor;
     touchgfx::TextArea ECTDescriptor;
     touchgfx::TextAreaWithOneWildcard IATValue;
-    touchgfx::TextAreaWithOneWildcard ECTValue;
+    touchgfx::TextAreaWithOneWildcard EGTValue;
     touchgfx::TextArea IATDescriptor_1;
     touchgfx::TextArea ECTDescriptor_1;
     touchgfx::TextAreaWithOneWildcard OILTempValue;
@@ -70,6 +70,9 @@ protected:
     touchgfx::Line line10_1;
     touchgfx::PainterRGB888 line10_1Painter;
     touchgfx::TextAreaWithOneWildcard BatteryVoltage;
+    touchgfx::ImageProgress RPMProgressBar;
+    touchgfx::TextAreaWithOneWildcard RPMValue;
+    touchgfx::TextArea CltValue_1_1;
 
     /*
      * Wildcard Buffers
@@ -86,14 +89,16 @@ protected:
     touchgfx::Unicode::UnicodeChar KmhValueBuffer[KMHVALUE_SIZE];
     static const uint16_t IATVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar IATValueBuffer[IATVALUE_SIZE];
-    static const uint16_t ECTVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar ECTValueBuffer[ECTVALUE_SIZE];
+    static const uint16_t EGTVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar EGTValueBuffer[EGTVALUE_SIZE];
     static const uint16_t OILTEMPVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar OILTempValueBuffer[OILTEMPVALUE_SIZE];
     static const uint16_t OILPRESSUREVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar OILPressureValueBuffer[OILPRESSUREVALUE_SIZE];
     static const uint16_t BATTERYVOLTAGE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar BatteryVoltageBuffer[BATTERYVOLTAGE_SIZE];
+    static const uint16_t RPMVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar RPMValueBuffer[RPMVALUE_SIZE];
 
 private:
 

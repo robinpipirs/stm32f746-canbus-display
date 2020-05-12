@@ -45,10 +45,10 @@ TextArea.hpp:46:7:touchgfx::TextArea::~TextArea()	16	static
 TextArea.hpp:46:7:virtual touchgfx::TextArea::~TextArea()	16	static
 TextAreaWithWildcard.hpp:35:7:touchgfx::TextAreaWithWildcardBase::~TextAreaWithWildcardBase()	16	static
 TextAreaWithWildcard.hpp:35:7:virtual touchgfx::TextAreaWithWildcardBase::~TextAreaWithWildcardBase()	16	static
-BoxWithBorder.hpp:65:13:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
-BoxWithBorder.hpp:65:13:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 AbstractPainterRGB888.hpp:44:13:touchgfx::AbstractPainterRGB888::~AbstractPainterRGB888()	16	static
 AbstractPainterRGB888.hpp:44:13:virtual touchgfx::AbstractPainterRGB888::~AbstractPainterRGB888()	16	static
+Image.hpp:36:7:touchgfx::Image::~Image()	16	static
+Image.hpp:36:7:virtual touchgfx::Image::~Image()	16	static
 View.hpp:39:7:touchgfx::View<MainPresenter>::~View()	16	static
 View.hpp:39:7:virtual touchgfx::View<MainPresenter>::~View()	16	static
 MainViewBase.hpp:23:13:MainViewBase::~MainViewBase()	16	static
@@ -58,11 +58,9 @@ MainView.hpp:11:13:virtual MainView::~MainView()	16	static
 MainView.cpp:3:1:MainView::MainView()	24	static
 MainView.cpp:15:6:virtual void MainView::setupScreen()	16	static
 MainView.cpp:19:6:virtual void MainView::tearDownScreen()	16	static
-MainView.cpp:31:6:void MainView::updateVal(uint8_t*)	24	static
+MainView.cpp:38:6:void MainView::updateVal(uint8_t*)	24	static
 TextAreaWithWildcard.hpp:63:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 TextAreaWithWildcard.hpp:63:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
-Image.hpp:36:7:touchgfx::Image::~Image()	16	static
-Image.hpp:36:7:virtual touchgfx::Image::~Image()	16	static
 Line.hpp:46:7:touchgfx::Line::~Line()	16	static
 Line.hpp:46:7:virtual touchgfx::Line::~Line()	16	static
 PainterRGB888.hpp:35:7:touchgfx::PainterRGB888::~PainterRGB888()	16	static

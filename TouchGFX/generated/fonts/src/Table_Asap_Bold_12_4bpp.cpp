@@ -32,8 +32,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_Asap_Bold_12_4bpp[] FONT_TABLE_LOCA
     {   697, 0x0050,   7,   9,   9,   0,   7,   0,   0, 0x00 },
     {   733, 0x0052,   8,   9,   9,   0,   7,   0,   0, 0x00 },
     {   769, 0x0053,   6,   9,   9,   0,   6,   0,   0, 0x00 },
-    {   796, 0x0054,   7,   9,   9,   0,   7,   0,   1, 0x00 },
-    {   832, 0x0056,   8,   9,   9,   0,   7,   0,   0, 0x00 }
+    {   796, 0x0054,   7,   9,   9,   0,   7,   0,   1, 0x00 }
 };
 
 // Asap_Bold_12_4bpp
@@ -48,6 +47,6 @@ touchgfx::GeneratedFont& getFont_Asap_Bold_12_4bpp();
 
 touchgfx::GeneratedFont& getFont_Asap_Bold_12_4bpp()
 {
-    static touchgfx::GeneratedFont Asap_Bold_12_4bpp(glyphs_Asap_Bold_12_4bpp, 29, 12, 0, 4, 1, 0, 1, unicodes_Asap_Bold_12_4bpp, kerning_Asap_Bold_12_4bpp, 63, 0, 0);
+    static touchgfx::GeneratedFont Asap_Bold_12_4bpp(glyphs_Asap_Bold_12_4bpp, 28, 12, 0, 4, 1, 0, 1, unicodes_Asap_Bold_12_4bpp, kerning_Asap_Bold_12_4bpp, 63, 0, 0);
     return Asap_Bold_12_4bpp;
 }

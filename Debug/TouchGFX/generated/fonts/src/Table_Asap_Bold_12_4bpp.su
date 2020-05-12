@@ -4,5 +4,5 @@ ConstFont.hpp:37:7:touchgfx::ConstFont::~ConstFont()	16	static
 ConstFont.hpp:37:7:virtual touchgfx::ConstFont::~ConstFont()	16	static
 GeneratedFont.hpp:22:7:touchgfx::GeneratedFont::~GeneratedFont()	16	static
 GeneratedFont.hpp:22:7:virtual touchgfx::GeneratedFont::~GeneratedFont()	16	static
-Table_Asap_Bold_12_4bpp.cpp:51:166:void __tcf_0()	8	static
-Table_Asap_Bold_12_4bpp.cpp:49:26:touchgfx::GeneratedFont& getFont_Asap_Bold_12_4bpp()	48	static
+Table_Asap_Bold_12_4bpp.cpp:50:166:void __tcf_0()	8	static
+Table_Asap_Bold_12_4bpp.cpp:48:26:touchgfx::GeneratedFont& getFont_Asap_Bold_12_4bpp()	48	static

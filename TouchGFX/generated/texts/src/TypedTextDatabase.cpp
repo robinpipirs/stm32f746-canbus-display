@@ -5,19 +5,23 @@
 #include <fonts/GeneratedFont.hpp>
 #include <texts/TypedTextDatabase.hpp>
 
-extern touchgfx::GeneratedFont& getFont_Asap_Regular_20_4bpp();
+extern touchgfx::GeneratedFont& getFont_Asap_Bold_18_4bpp();
 extern touchgfx::GeneratedFont& getFont_Asap_Bold_40_4bpp();
 extern touchgfx::GeneratedFont& getFont_Asap_Bold_30_4bpp();
 extern touchgfx::GeneratedFont& getFont_Asap_Bold_12_4bpp();
 extern touchgfx::GeneratedFont& getFont_Asap_Bold_60_4bpp();
+extern touchgfx::GeneratedFont& getFont_Asap_Bold_21_4bpp();
+extern touchgfx::GeneratedFont& getFont_Asap_Bold_10_4bpp();
 
 const touchgfx::Font* _fonts[] =
 {
-    &(getFont_Asap_Regular_20_4bpp()),
+    &(getFont_Asap_Bold_18_4bpp()),
     &(getFont_Asap_Bold_40_4bpp()),
     &(getFont_Asap_Bold_30_4bpp()),
     &(getFont_Asap_Bold_12_4bpp()),
-    &(getFont_Asap_Bold_60_4bpp())
+    &(getFont_Asap_Bold_60_4bpp()),
+    &(getFont_Asap_Bold_21_4bpp()),
+    &(getFont_Asap_Bold_10_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -64,8 +68,11 @@ const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCAT
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
 };
 
 TEXT_LOCATION_FLASH_PRAGMA
@@ -103,7 +110,7 @@ void resetFont(touchgfx::FontId fontId)
     switch (fontId)
     {
     case 0:
-        _fonts[0] = &(getFont_Asap_Regular_20_4bpp());
+        _fonts[0] = &(getFont_Asap_Bold_18_4bpp());
         break;
     case 1:
         _fonts[1] = &(getFont_Asap_Bold_40_4bpp());
@@ -116,6 +123,12 @@ void resetFont(touchgfx::FontId fontId)
         break;
     case 4:
         _fonts[4] = &(getFont_Asap_Bold_60_4bpp());
+        break;
+    case 5:
+        _fonts[5] = &(getFont_Asap_Bold_21_4bpp());
+        break;
+    case 6:
+        _fonts[6] = &(getFont_Asap_Bold_10_4bpp());
         break;
     }
 }

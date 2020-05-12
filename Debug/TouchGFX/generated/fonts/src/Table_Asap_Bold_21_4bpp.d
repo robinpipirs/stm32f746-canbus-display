@@ -1,5 +1,5 @@
-TouchGFX/generated/fonts/src/Table_Asap_Regular_20_4bpp.o: \
- ../TouchGFX/generated/fonts/src/Table_Asap_Regular_20_4bpp.cpp \
+TouchGFX/generated/fonts/src/Table_Asap_Bold_21_4bpp.o: \
+ ../TouchGFX/generated/fonts/src/Table_Asap_Bold_21_4bpp.cpp \
  ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

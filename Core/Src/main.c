@@ -64,13 +64,6 @@ CAN_HandleTypeDef hcan1;
 CAN_RxHeaderTypeDef   RxHeader;
 uint8_t               RxData[8];
 
-static float lambda = 0.77f;
-static float lambda_targ = 0.81f;
-
-static int rpm = 1600;
-static int map = 100;
-static int clt = 110;
-
 CRC_HandleTypeDef hcrc;
 
 DCMI_HandleTypeDef hdcmi;
@@ -142,6 +135,21 @@ void StartDefaultTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+static int rpm = 4600;
+static int map = 100;
+static int clt = 110;
+static float lambda = 0.77f;
+static float lambda_targ = 0.81f;
+
+static int vehicle_spd = 0;
+static int oil_tmp = 0;
+static int oil_press = 0;
+static int iat = 0;
+static int egt = 0;
+static int tps = 0;
+static int batt_v = 0;
+
 extern xQueueHandle messageQ;
 
 typedef struct {
@@ -150,6 +158,13 @@ typedef struct {
    int    map;
    float  lambda;
    float  lambda_trgt;
+   int	  vehicle_spd;
+   int    oil_tmp;
+   int    oil_press;
+   int    iat;
+   int    egt;
+   int	  tps;
+   int	  batt_v;
 } display_values;
 
 void SecondTask(void const* argument)
@@ -157,7 +172,7 @@ void SecondTask(void const* argument)
 
 	for(;;)
 	{
-		display_values dispVals = {rpm, clt, map, lambda, lambda_targ};
+		display_values dispVals = {rpm, clt, map, lambda, lambda_targ,};
 	    xQueueSend(messageQ, &dispVals,0);
 		osDelay(150);
 	}
@@ -478,21 +493,56 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     Error_Handler();
   }
 
-  /* Display LEDx */
-  if ((RxHeader.StdId == 0x500) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
+  /* Package one */
+  if ((RxHeader.StdId == 0x600) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
 	 uint16_t rpm_in = (RxData[0] << 0) | (RxData[1] << 8);
-	 uint16_t map_in = (RxData[2] << 0) | (RxData[3] << 8);
-	 uint16_t clt_in = (RxData[4] << 0) | (RxData[5] << 8);
-	 uint8_t lambda_in = RxData[6];
-	 uint16_t lambda_targ_in = RxData[7];
+	 int tps_in = RxData[2]* 0.5;
+	 int iat_in = RxData[3];
+	 uint16_t map_in = (RxData[4] << 0) | (RxData[7] << 8);
 
 	 rpm = rpm_in;
-	 map = map_in / 10;
-	 clt = clt_in / 10;
-	 lambda = lambda_in / 100.0f;
-	 lambda_targ = lambda_targ_in / 100.0f;
+	 map = map_in;
+	 iat = iat_in;
+	 tps = tps_in;
   }
+
+  if ((RxHeader.StdId == 0x602) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
+  {
+
+	 uint16_t vehicle_spd_in = (RxData[1] << 0) | (RxData[2] << 8);
+	 uint8_t oil_tmp_in = RxData[3];
+	 uint8_t oil_press_in = RxData[4];
+	 uint8_t fuel_press_in = RxData[5];
+	 uint16_t clt_in = (RxData[6] << 0) | (RxData[7] << 8);
+
+	 vehicle_spd = vehicle_spd_in;
+	 oil_tmp = oil_tmp_in;
+	 oil_press = oil_press_in;
+	 clt = clt_in;
+  }
+
+  if ((RxHeader.StdId == 0x603) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
+  {
+	 uint8_t lambda_in = RxData[2];
+
+	 uint8_t egt_1_in = RxData[4];
+
+	 lambda = lambda_in;
+	 egt = egt_1_in;
+   }
+
+  if ((RxHeader.StdId == 0x604) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
+  {
+	 uint16_t batt_in = (RxData[2] << 0) | (RxData[3] << 8);
+	 batt_v = batt_in;
+  }
+
+  if ((RxHeader.StdId == 0x500) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
+    {
+  	 uint16_t lambda_targ_in = RxData[7];
+  	 lambda_targ = lambda_targ_in / 100.0f;
+    }
 }
 
 /**
