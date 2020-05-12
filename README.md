@@ -30,7 +30,11 @@ Gfx tool: TouchGFX 4.13.0 Designer.
 - Do not be afraid to experiment. Have fun!
 
 ## Ecumaster emu black settings
-Bellow images is the can settings used to in ecumaster to work with the display.   
-![ecumaster_can_settings](ecumaster_bl_can_settings.png)   
+Bellow images is the can settings used for the display to work with ecumaster.     
+![ecumaster_can_settings](ecumaster_bl_can_settings.png)      
+
+\
+\
+
 
 ![ecumaster_can_userdefines](ecumaster_bl_userdefines.png)
