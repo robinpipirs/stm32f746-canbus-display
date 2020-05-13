@@ -864,7 +864,7 @@
             "ProgressRangeMax": 10000,
             "ProgressRangeSteps": 0,
             "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 9900,
+            "ProgressInitialValue": 6600,
             "Name": "RPMProgressBar",
             "X": 1,
             "Y": 1,

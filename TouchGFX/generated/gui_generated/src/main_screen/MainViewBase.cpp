@@ -223,7 +223,7 @@ MainViewBase::MainViewBase()
     RPMProgressBar.setRange(0, 10000);
     RPMProgressBar.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
     RPMProgressBar.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_RED_YELLOW_FADEYELLOWRED_SMALL_TRANSPARENT_ID);
-    RPMProgressBar.setValue(9900);
+    RPMProgressBar.setValue(6600);
     RPMProgressBar.setAnchorAtZero(true);
 
     RPMValue.setPosition(25, 4, 55, 22);

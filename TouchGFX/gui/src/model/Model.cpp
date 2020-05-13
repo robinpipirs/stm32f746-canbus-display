@@ -7,6 +7,7 @@
 #include "task.h"
 
 uint8_t values[sizeof(display_values)];
+uint8_t settings_value[sizeof(settings_message)];
 
 extern "C"
 {
@@ -27,8 +28,8 @@ void Model::tick()
 		modelListener->setNewValue(values);
 	}
 
-	if(xQueueReceive(settingsMessageQ, &values , 0) == pdTRUE)
+	if(xQueueReceive(settingsMessageQ, &settings_value , 0) == pdTRUE)
 	{
-		modelListener->updateDisplaySettings(values);
+		modelListener->updateDisplaySettings(settings_value);
 	}
 }

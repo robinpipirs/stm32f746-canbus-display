@@ -22,16 +22,16 @@ typedef struct {
 
 typedef struct {
 	int    rpm_limit;
-	float    rpm1;
-	float    rpm2;
-	float    rpm3;
-	float    rpm4;
-	float    rpm5;
-	float    rpm6;
-	float    rpm7;
-	float    rpm8;
-	float    rpm9;
-	float    rpm10;
+	int    rpm1;
+	int    rpm2;
+	int    rpm3;
+	int    rpm4;
+	int    rpm5;
+	int    rpm6;
+	int    rpm7;
+	int    rpm8;
+	int    rpm9;
+	int    rpm10;
 	int has_float;
 } settings_message;
 

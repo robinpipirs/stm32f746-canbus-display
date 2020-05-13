@@ -68,55 +68,40 @@ void MainView::updateSettings(uint8_t* settings)
 
 	rev_limit = (int)new_settings->rpm_limit;
 
-	RPMProgressBar.setRange(0, (new_settings->rpm10*1000), 0, 0);
+	RPMProgressBar.setRange(0, (int)(new_settings->rpm10*1000.0f), 0, 0);
 	RPMProgressBar.invalidate();
 
-	if(new_settings->has_float)
-	{
-		Unicode::snprintfFloat(rpm1Buffer, RPM1_SIZE, "%.1f", new_settings->rpm1);
-		rpm1.invalidate();
-		Unicode::snprintfFloat(rpm2Buffer, RPM2_SIZE, "%.1f", new_settings->rpm2);
-		rpm2.invalidate();
-		Unicode::snprintfFloat(rpm3Buffer, RPM3_SIZE, "%.1f", new_settings->rpm3);
-		rpm3.invalidate();
-		Unicode::snprintfFloat(rpm4Buffer, RPM4_SIZE, "%.1f", new_settings->rpm4);
-		rpm4.invalidate();
-		Unicode::snprintfFloat(rpm5Buffer, RPM5_SIZE, "%.1f", new_settings->rpm5);
-		rpm5.invalidate();
-		Unicode::snprintfFloat(rpm6Buffer, RPM6_SIZE, "%.1f", new_settings->rpm6);
-		rpm6.invalidate();
-		Unicode::snprintfFloat(rpm7Buffer, RPM7_SIZE, "%.1f", new_settings->rpm7);
-		rpm7.invalidate();
-		Unicode::snprintfFloat(rpm8Buffer, RPM8_SIZE, "%.1f", new_settings->rpm8);
-		rpm8.invalidate();
-		Unicode::snprintfFloat(rpm9Buffer, RPM9_SIZE, "%.1f", new_settings->rpm9);
-		rpm9.invalidate();
-		Unicode::snprintfFloat(rpm10Buffer, RPM10_SIZE, "%.1f", new_settings->rpm10);
-		rpm10.invalidate();
-	}
-	else
-	{
-			Unicode::snprintf(rpm1Buffer, RPM1_SIZE, "%d", new_settings->rpm1);
-			rpm1.invalidate();
-			Unicode::snprintf(rpm2Buffer, RPM2_SIZE, "%d", new_settings->rpm2);
-			rpm2.invalidate();
-			Unicode::snprintf(rpm3Buffer, RPM3_SIZE, "%d", new_settings->rpm3);
-			rpm3.invalidate();
-			Unicode::snprintf(rpm4Buffer, RPM4_SIZE, "%d", new_settings->rpm4);
-			rpm4.invalidate();
-			Unicode::snprintf(rpm5Buffer, RPM5_SIZE, "%d", new_settings->rpm5);
-			rpm5.invalidate();
-			Unicode::snprintf(rpm6Buffer, RPM6_SIZE, "%d", new_settings->rpm6);
-			rpm6.invalidate();
-			Unicode::snprintf(rpm7Buffer, RPM7_SIZE, "%d", new_settings->rpm7);
-			rpm7.invalidate();
-			Unicode::snprintf(rpm8Buffer, RPM8_SIZE, "%d", new_settings->rpm8);
-			rpm8.invalidate();
-			Unicode::snprintf(rpm9Buffer, RPM9_SIZE, "%d", new_settings->rpm9);
-			rpm9.invalidate();
-			Unicode::snprintf(rpm10Buffer, RPM10_SIZE, "%d", new_settings->rpm10);
-			rpm10.invalidate();
-	}
+	Unicode::snprintf(rpm1Buffer, RPM1_SIZE, "%d", new_settings->rpm1);
+	rpm1.resizeToCurrentText();
+	rpm1.invalidate();
+	Unicode::snprintf(rpm2Buffer, RPM2_SIZE, "%d", new_settings->rpm2);
+	rpm2.resizeToCurrentText();
+	rpm2.invalidate();
+	Unicode::snprintf(rpm3Buffer, RPM3_SIZE, "%d", new_settings->rpm3);
+	rpm3.resizeToCurrentText();
+	rpm3.invalidate();
+	Unicode::snprintf(rpm4Buffer, RPM4_SIZE, "%d", new_settings->rpm4);
+	rpm4.resizeToCurrentText();
+	rpm4.invalidate();
+	Unicode::snprintf(rpm5Buffer, RPM5_SIZE, "%d", new_settings->rpm5);
+	rpm5.resizeToCurrentText();
+	rpm5.invalidate();
+	Unicode::snprintf(rpm6Buffer, RPM6_SIZE, "%d", new_settings->rpm6);
+	rpm6.resizeToCurrentText();
+	rpm6.invalidate();
+	Unicode::snprintf(rpm7Buffer, RPM7_SIZE, "%d", new_settings->rpm7);
+	rpm7.resizeToCurrentText();
+	rpm7.invalidate();
+	Unicode::snprintf(rpm8Buffer, RPM8_SIZE, "%d", new_settings->rpm8);
+	rpm8.resizeToCurrentText();
+	rpm8.invalidate();
+	Unicode::snprintf(rpm9Buffer, RPM9_SIZE, "%d", new_settings->rpm9);
+	rpm9.resizeToCurrentText();
+	rpm9.invalidate();
+	Unicode::snprintf(rpm10Buffer, RPM10_SIZE, "%d", new_settings->rpm10);
+	rpm10.resizeToCurrentText();
+	rpm10.invalidate();
+
 
 }
 
