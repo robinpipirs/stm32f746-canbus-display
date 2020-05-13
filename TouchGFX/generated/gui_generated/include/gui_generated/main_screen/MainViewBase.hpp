@@ -70,9 +70,9 @@ protected:
     touchgfx::ImageProgress RPMProgressBar;
     touchgfx::TextAreaWithOneWildcard RPMValue;
     touchgfx::TextArea CltValue_1_1;
-    touchgfx::TextAreaWithOneWildcard KMHValue;
     touchgfx::TextAreaWithOneWildcard CLTValue;
     touchgfx::TextAreaWithOneWildcard MAPValue;
+    touchgfx::TextAreaWithOneWildcard KMHValue;
 
     /*
      * Wildcard Buffers
@@ -93,12 +93,12 @@ protected:
     touchgfx::Unicode::UnicodeChar BatteryVoltageBuffer[BATTERYVOLTAGE_SIZE];
     static const uint16_t RPMVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar RPMValueBuffer[RPMVALUE_SIZE];
-    static const uint16_t KMHVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar KMHValueBuffer[KMHVALUE_SIZE];
     static const uint16_t CLTVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar CLTValueBuffer[CLTVALUE_SIZE];
     static const uint16_t MAPVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar MAPValueBuffer[MAPVALUE_SIZE];
+    static const uint16_t KMHVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar KMHValueBuffer[KMHVALUE_SIZE];
 
 private:
 

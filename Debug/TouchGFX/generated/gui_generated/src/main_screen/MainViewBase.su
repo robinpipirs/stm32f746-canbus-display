@@ -74,7 +74,7 @@ MainViewBase.hpp:23:13:MainViewBase::~MainViewBase()	16	static
 MainViewBase.hpp:23:13:virtual MainViewBase::~MainViewBase()	16	static
 Color.hpp:54:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	24	static
 MainViewBase.cpp:9:1:MainViewBase::MainViewBase()	224	static
-MainViewBase.cpp:294:6:virtual void MainViewBase::setupScreen()	16	static
+MainViewBase.cpp:283:6:virtual void MainViewBase::setupScreen()	16	static
 View.hpp:50:5:touchgfx::View<T>::View() [with T = MainPresenter]	16	static
 Line.hpp:115:10:void touchgfx::Line::setStart(T, T) [with T = int]	48	static
 Line.hpp:218:10:void touchgfx::Line::setEnd(T, T) [with T = int]	48	static

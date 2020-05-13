@@ -1,5 +1,8 @@
 #include <gui/main_screen/MainView.hpp>
 
+#include "display_values.h"
+#include <touchgfx/Color.hpp>
+
 MainView::MainView()
 {
     // Support of larger displays for this example
@@ -20,72 +23,100 @@ void MainView::tearDownScreen()
 {
 }
 
-typedef struct {
-   int    rpm;
-   int    clt;
-   int    map;
-   float  lambda;
-   float  lambda_trgt;
-   int	  vehicle_spd;
-   int    oil_tmp;
-   int    oil_press;
-   int    iat;
-   int    egt;
-   int	  tps;
-   float	  batt_v;
-} display_values;
+static colortype getBlackColor()
+{
+	colortype black_color = touchgfx::Color::getColorFrom24BitRGB(0,0,0);
+}
+
+static int color_index = 0;
+
+static colortype getColorFromRevLimit()
+{
+
+	color_index ++;
+	if(color_index >= 3)
+	{
+		color_index = 0;
+	}
+
+	colortype red_color = touchgfx::Color::getColorFrom24BitRGB(255,0,0);
+	colortype green_color = touchgfx::Color::getColorFrom24BitRGB(0,255,0);
+	colortype white_color = touchgfx::Color::getColorFrom24BitRGB(255,255,255);
+
+	colortype color_to_set;
+
+	if(color_index == 0)
+	{
+		color_to_set = red_color;
+	}
+	if(color_index == 1)
+	{
+		color_to_set = green_color;
+	}
+	if(color_index == 2)
+	{
+		color_to_set = white_color;
+	}
+
+	return color_to_set;
+}
 
 void MainView::updateVal(uint8_t* newValue)
 {
+
+	static bool background_is_black = false;
 	display_values* values = (display_values*) newValue;
+
+	bool on_rev_limiter = values->rpm >= 9000;
+	if(on_rev_limiter)
+	{
+		background_is_black = false;
+		backgroundBox.setColor(getColorFromRevLimit());
+		backgroundBox.invalidate();
+	}
+	else if(!background_is_black){
+		backgroundBox.setColor(getBlackColor());
+		backgroundBox.invalidate();
+		background_is_black = true;
+	}
+
 
 	RPMProgressBar.setValue(values->rpm);
 	RPMProgressBar.invalidate();
 
 	Unicode::snprintf(RPMValueBuffer, RPMVALUE_SIZE, "%d", values->rpm);
-	RPMValue.resizeToCurrentText();
 	RPMValue.invalidate();
 
 	Unicode::snprintf(MAPValueBuffer, MAPVALUE_SIZE, "%d", values->map);
-	MAPValue.resizeToCurrentText();
 	MAPValue.invalidate();
 
 	Unicode::snprintf(CLTValueBuffer, CLTVALUE_SIZE, "%d", values->clt);
-	CLTValue.resizeToCurrentText();
 	CLTValue.invalidate();
 
 	Unicode::snprintfFloat(LambdaValueBuffer, LAMBDAVALUE_SIZE, "%.2f",values->lambda);
-	LambdaValue.resizeToCurrentText();
 	LambdaValue.invalidate();
 
 	Unicode::snprintfFloat(TrgtValueBuffer, TRGTVALUE_SIZE, "%.2f",values->lambda_trgt);
-	TrgtValue.resizeToCurrentText();
 	TrgtValue.invalidate();
 
 	Unicode::snprintf(KMHValueBuffer, KMHVALUE_SIZE, "%d",values->vehicle_spd);
-	KMHValue.resizeToCurrentText();
 	KMHValue.invalidate();
 
-	Unicode::snprintf(OILPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%d",values->oil_press);
-	OILPressureValue.resizeToCurrentText();
+	Unicode::snprintfFloat(OILPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%.1f",values->oil_press);
 	OILPressureValue.invalidate();
 
 	Unicode::snprintf(OILTempValueBuffer, OILTEMPVALUE_SIZE, "%d",values->oil_tmp);
-	OILTempValue.resizeToCurrentText();
 	OILTempValue.invalidate();
 
 	Unicode::snprintf(IATValueBuffer, IATVALUE_SIZE, "%d",values->iat);
-	IATValue.resizeToCurrentText();
 	IATValue.invalidate();
 
 	Unicode::snprintf(EGTValueBuffer, EGTVALUE_SIZE, "%d",values->egt);
-	EGTValue.resizeToCurrentText();
 	EGTValue.invalidate();
 
 	TPSProgress.setValue(values->tps);
 	RPMProgressBar.invalidate();
 
 	Unicode::snprintfFloat(BatteryVoltageBuffer, BATTERYVOLTAGE_SIZE, "%.2f",values->batt_v);
-	BatteryVoltage.resizeToCurrentText();
 	BatteryVoltage.invalidate();
 }

@@ -146,7 +146,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId10",
@@ -154,9 +154,9 @@
               "BufferSize": 5
             },
             "Name": "LambdaValue",
-            "X": 27,
+            "X": 24,
             "Y": 91,
-            "Width": 54,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -174,7 +174,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId8",
@@ -182,9 +182,9 @@
               "BufferSize": 5
             },
             "Name": "TrgtValue",
-            "X": 107,
+            "X": 104,
             "Y": 91,
-            "Width": 54,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -221,7 +221,7 @@
             "LineSpacing": 0,
             "Name": "rpm1",
             "X": 46,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -244,7 +244,7 @@
             "LineSpacing": 0,
             "Name": "rpm2",
             "X": 94,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -267,7 +267,7 @@
             "LineSpacing": 0,
             "Name": "rpm3",
             "X": 143,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -290,7 +290,7 @@
             "LineSpacing": 0,
             "Name": "rpm4",
             "X": 189,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -313,7 +313,7 @@
             "LineSpacing": 0,
             "Name": "rpm5",
             "X": 236,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -336,7 +336,7 @@
             "LineSpacing": 0,
             "Name": "rpm6",
             "X": 285,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -359,7 +359,7 @@
             "LineSpacing": 0,
             "Name": "rpm7",
             "X": 332,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -382,7 +382,7 @@
             "LineSpacing": 0,
             "Name": "rpm8",
             "X": 380,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -405,7 +405,7 @@
             "LineSpacing": 0,
             "Name": "rpm9",
             "X": 427,
-            "Y": 56,
+            "Y": 61,
             "Width": 6,
             "Height": 14,
             "Type": "TextArea",
@@ -428,7 +428,7 @@
             "LineSpacing": 0,
             "Name": "rpm10",
             "X": 465,
-            "Y": 56,
+            "Y": 61,
             "Width": 13,
             "Height": 14,
             "Type": "TextArea",
@@ -454,7 +454,7 @@
             "LineEndingStyle": "Round",
             "Name": "line11",
             "X": -2,
-            "Y": 53,
+            "Y": 58,
             "Width": 490,
             "Height": 5,
             "Type": "Line",
@@ -519,7 +519,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId23",
@@ -527,9 +527,9 @@
               "BufferSize": 5
             },
             "Name": "IATValue",
-            "X": 38,
+            "X": 26,
             "Y": 153,
-            "Width": 32,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -547,7 +547,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId25",
@@ -555,9 +555,9 @@
               "BufferSize": 5
             },
             "Name": "EGTValue",
-            "X": 107,
+            "X": 104,
             "Y": 153,
-            "Width": 48,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -621,7 +621,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId37",
@@ -631,7 +631,7 @@
             "Name": "OILTempValue",
             "X": 328,
             "Y": 153,
-            "Width": 48,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -649,17 +649,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "TextId": "SingleUseId39",
+              "TextId": "SingleUseId57",
               "UseBuffer": true,
               "BufferSize": 5
             },
             "Name": "OILPressureValue",
-            "X": 414,
+            "X": 411,
             "Y": 153,
-            "Width": 48,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -782,7 +782,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId45",
@@ -790,9 +790,9 @@
               "BufferSize": 5
             },
             "Name": "BatteryVoltage",
-            "X": 215,
+            "X": 210,
             "Y": 247,
-            "Width": 48,
+            "Width": 60,
             "Height": 21,
             "Type": "TextArea",
             "Visible": true,
@@ -802,7 +802,7 @@
             "Moveable": false
           },
           {
-            "FileNameProgress": "__designer\\Blue_ProgressIndicators_fill_tiling_red_yellow_fadeyellowred_small.png",
+            "FileNameProgress": "__designer\\Blue_ProgressIndicators_fill_tiling_red_yellow_fadeyellowred_small_transparent.png",
             "AnchorAtZero": true,
             "Direction": "Right",
             "Alpha": 255,
@@ -814,10 +814,10 @@
             "ProgressRangeMax": 10000,
             "ProgressRangeSteps": 0,
             "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 9500,
+            "ProgressInitialValue": 9900,
             "Name": "RPMProgressBar",
-            "X": 0,
-            "Y": 0,
+            "X": 1,
+            "Y": 1,
             "Width": 478,
             "Height": 55,
             "Type": "ImageProgress",
@@ -836,7 +836,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId47",
@@ -844,10 +844,10 @@
               "BufferSize": 5
             },
             "Name": "RPMValue",
-            "X": 29,
-            "Y": 5,
-            "Width": 50,
-            "Height": 25,
+            "X": 25,
+            "Y": 4,
+            "Width": 55,
+            "Height": 22,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -867,38 +867,10 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "CltValue_1_1",
-            "X": 76,
-            "Y": 16,
+            "X": 82,
+            "Y": 15,
             "Width": 20,
             "Height": 12,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId51",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId52",
-              "UseBuffer": true,
-              "BufferSize": 5
-            },
-            "Name": "KMHValue",
-            "X": 192,
-            "Y": 69,
-            "Width": 111,
-            "Height": 69,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -915,7 +887,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId54",
@@ -923,9 +895,9 @@
               "BufferSize": 5
             },
             "Name": "CLTValue",
-            "X": 331,
+            "X": 328,
             "Y": 91,
-            "Width": 48,
+            "Width": 60,
             "Height": 35,
             "Type": "TextArea",
             "Visible": true,
@@ -943,7 +915,7 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId56",
@@ -951,10 +923,38 @@
               "BufferSize": 5
             },
             "Name": "MAPValue",
-            "X": 414,
+            "X": 409,
             "Y": 91,
-            "Width": 48,
+            "Width": 60,
             "Height": 35,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId58",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId59",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Name": "KMHValue",
+            "X": 185,
+            "Y": 76,
+            "Width": 110,
+            "Height": 69,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1084,10 +1084,6 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId39",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId40",
         "IsResource": false
       },
@@ -1120,14 +1116,6 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId51",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId52",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId53",
         "IsResource": false
       },
@@ -1141,6 +1129,18 @@
       },
       {
         "TextEntryId": "SingleUseId56",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId57",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId58",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId59",
         "IsResource": false
       }
     ],

@@ -24,6 +24,8 @@
 #include "fatfs.h"
 #include "app_touchgfx.h"
 
+#include "display_values.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -144,7 +146,7 @@ static float lambda_targ = 0.81f;
 
 static int vehicle_spd = 0;
 static int oil_tmp = 0;
-static int oil_press = 0;
+static float oil_press = 0;
 static int iat = 0;
 static int egt = 0;
 static int tps = 0;
@@ -152,27 +154,29 @@ static float batt_v = 0;
 
 extern xQueueHandle messageQ;
 
-typedef struct {
-   int    rpm;
-   int    clt;
-   int    map;
-   float  lambda;
-   float  lambda_trgt;
-   int	  vehicle_spd;
-   int    oil_tmp;
-   int    oil_press;
-   int    iat;
-   int    egt;
-   int	  tps;
-   float	  batt_v;
-} display_values;
-
 void SecondTask(void const* argument)
 {
-
+	static const int demo_mode = 1;
 	for(;;)
 	{
-		display_values dispVals = {rpm, clt, map, lambda, lambda_targ,};
+		if(demo_mode)
+		{
+
+			rpm = (rpm >= 10000) ? 0: rpm + 250;
+			clt = (clt >= 250) ? -40: clt + 3;
+			map = (map >= 450) ? 1: map + 6;
+			lambda = (lambda >= 1.4) ? 0.6: lambda + 0.05;
+			lambda_targ = (lambda_targ >= 1.4) ? 0.65: lambda_targ + 0.06;
+			vehicle_spd = (vehicle_spd >= 400) ? 0: vehicle_spd + 6;
+			oil_tmp = (oil_tmp >= 160) ? 1: oil_tmp + 2;
+			oil_press = (oil_press >= 12.0) ? 0.1: oil_press + 0.1;
+			iat = (iat >= 100) ? 1: iat + 2;
+			egt = (egt >= 760) ? 500: egt +12;
+			tps = (tps >= 100) ? 0: tps + 4;
+			batt_v = (batt_v >= 20.0) ? 10.0: batt_v + 0.6;
+		}
+
+		display_values dispVals = {rpm, clt, map, lambda, lambda_targ, vehicle_spd, oil_tmp, oil_press, iat, egt, tps, batt_v};
 	    xQueueSend(messageQ, &dispVals,0);
 		osDelay(150);
 	}

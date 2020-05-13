@@ -1,3 +1,4 @@
+Types.hpp:99:5:touchgfx::colortype::colortype()	16	static
 Types.hpp:193:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	24	static
 Unicode.hpp:495:25:static touchgfx::Unicode::UnicodeChar* touchgfx::Unicode::snprintfFloat(touchgfx::Unicode::UnicodeChar*, uint16_t, const char*, float)	24	static
 Drawable.hpp:75:13:touchgfx::Drawable::~Drawable()	16	static
@@ -21,6 +22,8 @@ Drawable.hpp:515:10:bool touchgfx::Drawable::isTouchable() const	16	static
 Drawable.hpp:563:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
 Drawable.hpp:601:10:void touchgfx::Drawable::resetDrawChainCache()	16	static
 Drawable.hpp:687:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	24	static
+HAL.hpp:116:17:static touchgfx::HAL* touchgfx::HAL::getInstance()	4	static
+HAL.hpp:297:17:static touchgfx::LCD& touchgfx::HAL::lcd()	4	static
 Container.hpp:63:13:touchgfx::Container::~Container()	16	static
 Container.hpp:63:13:virtual touchgfx::Container::~Container()	16	static
 Screen.hpp:66:13:touchgfx::Screen::~Screen()	16	static
@@ -35,6 +38,7 @@ Widget.hpp:53:13:virtual touchgfx::Widget::~Widget()	16	static
 Widget.hpp:74:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
 Box.hpp:76:13:touchgfx::Box::~Box()	16	static
 Box.hpp:76:13:virtual touchgfx::Box::~Box()	16	static
+Box.hpp:89:10:void touchgfx::Box::setColor(touchgfx::colortype)	16	static
 TypedText.hpp:135:17:const touchgfx::Font* touchgfx::TypedText::getFont() const	16	static
 TypedText.hpp:220:10:void touchgfx::TypedText::assertValid() const	16	static
 TextArea.hpp:70:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	24	static
@@ -55,10 +59,13 @@ MainViewBase.hpp:23:13:MainViewBase::~MainViewBase()	16	static
 MainViewBase.hpp:23:13:virtual MainViewBase::~MainViewBase()	16	static
 MainView.hpp:11:13:MainView::~MainView()	16	static
 MainView.hpp:11:13:virtual MainView::~MainView()	16	static
-MainView.cpp:3:1:MainView::MainView()	24	static
-MainView.cpp:15:6:virtual void MainView::setupScreen()	16	static
-MainView.cpp:19:6:virtual void MainView::tearDownScreen()	16	static
-MainView.cpp:38:6:void MainView::updateVal(uint8_t*)	24	static
+Color.hpp:54:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	24	static
+MainView.cpp:6:1:MainView::MainView()	24	static
+MainView.cpp:18:6:virtual void MainView::setupScreen()	16	static
+MainView.cpp:22:6:virtual void MainView::tearDownScreen()	16	static
+MainView.cpp:26:18:touchgfx::colortype getBlackColor()	16	static
+MainView.cpp:33:18:touchgfx::colortype getColorFromRevLimit()	24	static
+MainView.cpp:64:6:void MainView::updateVal(uint8_t*)	32	static
 TextAreaWithWildcard.hpp:63:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 TextAreaWithWildcard.hpp:63:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 Line.hpp:46:7:touchgfx::Line::~Line()	16	static

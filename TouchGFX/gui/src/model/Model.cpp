@@ -4,21 +4,7 @@
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "task.h"
-
-typedef struct {
-   int    rpm;
-   int    clt;
-   int    map;
-   float  lambda;
-   float  lambda_trgt;
-   int	  vehicle_spd;
-   int    oil_tmp;
-   int    oil_press;
-   int    iat;
-   int    egt;
-   int	  tps;
-   float	  batt_v;
-} display_values;
+#include "display_values.h"
 
 uint8_t values[sizeof(display_values)];
 
