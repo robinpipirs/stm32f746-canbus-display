@@ -18,3 +18,8 @@ void MainPresenter::setNewValue(uint8_t* newValue)
 {
 	view.updateVal(newValue);
 }
+
+void MainPresenter::updateDisplaySettings(uint8_t* settings)
+{
+	view.updateSettings(settings);
+}

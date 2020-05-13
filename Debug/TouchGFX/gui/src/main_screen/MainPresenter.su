@@ -7,9 +7,11 @@ ModelListener.hpp:18:5:ModelListener::ModelListener()	16	static
 ModelListener.hpp:20:13:ModelListener::~ModelListener()	16	static
 ModelListener.hpp:20:13:virtual ModelListener::~ModelListener()	16	static
 ModelListener.hpp:31:18:virtual void ModelListener::setNewValue(uint8_t*)	16	static
+ModelListener.hpp:32:18:virtual void ModelListener::updateDisplaySettings(uint8_t*)	16	static
 MainPresenter.hpp:28:13:MainPresenter::~MainPresenter()	16	static
 MainPresenter.hpp:28:13:virtual MainPresenter::~MainPresenter()	16	static
 MainPresenter.cpp:4:1:MainPresenter::MainPresenter(MainView&)	16	static
 MainPresenter.cpp:9:6:virtual void MainPresenter::activate()	16	static
 MainPresenter.cpp:13:6:virtual void MainPresenter::deactivate()	16	static
 MainPresenter.cpp:17:6:virtual void MainPresenter::setNewValue(uint8_t*)	16	static
+MainPresenter.cpp:22:6:virtual void MainPresenter::updateDisplaySettings(uint8_t*)	16	static

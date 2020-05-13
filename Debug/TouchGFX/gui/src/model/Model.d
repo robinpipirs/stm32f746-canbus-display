@@ -5,6 +5,7 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../Core/Inc/message_types.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -15,8 +16,7 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../Core/Inc/display_values.h
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 
@@ -29,6 +29,8 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:
 
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
+
+../Core/Inc/message_types.h:
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 
@@ -51,5 +53,3 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-../Core/Inc/display_values.h:

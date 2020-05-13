@@ -72,7 +72,7 @@ TouchGFX/gui/src/main_screen/MainView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- ../Core/Inc/display_values.h \
+ ../Core/Inc/message_types.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 
 ../TouchGFX/gui/include/gui/main_screen/MainView.hpp:
@@ -219,6 +219,6 @@ TouchGFX/gui/src/main_screen/MainView.o: \
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 
-../Core/Inc/display_values.h:
+../Core/Inc/message_types.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

@@ -29,6 +29,7 @@ public:
     }
 
     virtual void setNewValue(uint8_t* newValue){}
+    virtual void updateDisplaySettings(uint8_t* settings){}
 protected:
     Model* model;
 };

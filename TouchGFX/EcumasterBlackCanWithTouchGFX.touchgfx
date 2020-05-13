@@ -217,12 +217,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId60",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm1",
-            "X": 46,
+            "X": 41,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -240,12 +245,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId61",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm2",
-            "X": 94,
+            "X": 87,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -263,12 +273,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId62",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm3",
-            "X": 143,
+            "X": 136,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -286,12 +301,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId63",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm4",
-            "X": 189,
+            "X": 183,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -309,12 +329,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId64",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm5",
-            "X": 236,
+            "X": 232,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -332,12 +357,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId65",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm6",
-            "X": 285,
+            "X": 279,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -355,12 +385,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId66",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm7",
-            "X": 332,
+            "X": 328,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -378,12 +413,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId67",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm8",
-            "X": 380,
+            "X": 376,
             "Y": 61,
-            "Width": 6,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -401,12 +441,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId68",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm9",
-            "X": 427,
-            "Y": 61,
-            "Width": 6,
+            "X": 424,
+            "Y": 60,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -424,12 +469,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId69",
+              "UseBuffer": true,
+              "BufferSize": 2
+            },
             "Name": "rpm10",
-            "X": 465,
+            "X": 463,
             "Y": 61,
-            "Width": 13,
+            "Width": 18,
             "Height": 14,
             "Type": "TextArea",
             "Visible": true,
@@ -1141,6 +1191,46 @@
       },
       {
         "TextEntryId": "SingleUseId59",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId60",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId61",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId62",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId63",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId64",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId65",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId66",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId67",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId68",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId69",
         "IsResource": false
       }
     ],

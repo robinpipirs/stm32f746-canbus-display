@@ -60,12 +60,13 @@ MainViewBase.hpp:23:13:virtual MainViewBase::~MainViewBase()	16	static
 MainView.hpp:11:13:MainView::~MainView()	16	static
 MainView.hpp:11:13:virtual MainView::~MainView()	16	static
 Color.hpp:54:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	24	static
-MainView.cpp:6:1:MainView::MainView()	24	static
-MainView.cpp:18:6:virtual void MainView::setupScreen()	16	static
-MainView.cpp:22:6:virtual void MainView::tearDownScreen()	16	static
-MainView.cpp:26:18:touchgfx::colortype getBlackColor()	16	static
-MainView.cpp:33:18:touchgfx::colortype getColorFromRevLimit()	24	static
-MainView.cpp:64:6:void MainView::updateVal(uint8_t*)	32	static
+MainView.cpp:9:1:MainView::MainView()	24	static
+MainView.cpp:21:6:virtual void MainView::setupScreen()	16	static
+MainView.cpp:25:6:virtual void MainView::tearDownScreen()	16	static
+MainView.cpp:29:18:touchgfx::colortype getBlackColor()	16	static
+MainView.cpp:34:18:touchgfx::colortype getColorFromRevLimit()	24	static
+MainView.cpp:65:6:void MainView::updateSettings(uint8_t*)	40	static
+MainView.cpp:123:6:void MainView::updateVal(uint8_t*)	32	static
 TextAreaWithWildcard.hpp:63:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 TextAreaWithWildcard.hpp:63:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 Line.hpp:46:7:touchgfx::Line::~Line()	16	static

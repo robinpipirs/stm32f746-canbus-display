@@ -13,6 +13,7 @@ public:
     virtual void tearDownScreen();
 
     void updateVal(uint8_t* newValue);
+    void updateSettings(uint8_t* settings);
 
 protected:
 };

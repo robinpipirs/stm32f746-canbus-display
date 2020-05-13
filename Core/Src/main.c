@@ -19,12 +19,12 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <message_types.h>
 #include "main.h"
 #include "cmsis_os.h"
 #include "fatfs.h"
 #include "app_touchgfx.h"
 
-#include "display_values.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -153,9 +153,15 @@ static int tps = 0;
 static float batt_v = 0;
 
 extern xQueueHandle messageQ;
+extern xQueueHandle settingsMessageQ;
 
 void SecondTask(void const* argument)
 {
+
+	settings_message settings_val = {7000, 1.0f, 1.8f, 2.6f, 3.2f, 4.0f, 4.8f, 5.6f, 6.4f, 7.2f, 8.0f, 1};
+	xQueueSend(settingsMessageQ, &settings_val,0);
+	osDelay(150);
+
 	static const int demo_mode = 1;
 	for(;;)
 	{
