@@ -41,7 +41,7 @@ static colortype getColorFromRevLimit()
 	}
 
 	colortype red_color = touchgfx::Color::getColorFrom24BitRGB(255,0,0);
-	colortype green_color = touchgfx::Color::getColorFrom24BitRGB(0,255,0);
+	colortype black_color = touchgfx::Color::getColorFrom24BitRGB(0,0,0);
 	colortype white_color = touchgfx::Color::getColorFrom24BitRGB(255,255,255);
 
 	colortype color_to_set;
@@ -52,7 +52,7 @@ static colortype getColorFromRevLimit()
 	}
 	if(color_index == 1)
 	{
-		color_to_set = green_color;
+		color_to_set = black_color;
 	}
 	if(color_index == 2)
 	{
@@ -68,7 +68,7 @@ void MainView::updateSettings(uint8_t* settings)
 
 	rev_limit = (int)new_settings->rpm_limit;
 
-	RPMProgressBar.setRange(0, (int)(new_settings->rpm10*1000.0f), 0, 0);
+	RPMProgressBar.setRange(0, (int)(new_settings->rpm8*1000.0f), 0, 0);
 	RPMProgressBar.invalidate();
 
 	Unicode::snprintf(rpm1Buffer, RPM1_SIZE, "%d", new_settings->rpm1);
@@ -95,13 +95,6 @@ void MainView::updateSettings(uint8_t* settings)
 	Unicode::snprintf(rpm8Buffer, RPM8_SIZE, "%d", new_settings->rpm8);
 	rpm8.resizeToCurrentText();
 	rpm8.invalidate();
-	Unicode::snprintf(rpm9Buffer, RPM9_SIZE, "%d", new_settings->rpm9);
-	rpm9.resizeToCurrentText();
-	rpm9.invalidate();
-	Unicode::snprintf(rpm10Buffer, RPM10_SIZE, "%d", new_settings->rpm10);
-	rpm10.resizeToCurrentText();
-	rpm10.invalidate();
-
 
 }
 

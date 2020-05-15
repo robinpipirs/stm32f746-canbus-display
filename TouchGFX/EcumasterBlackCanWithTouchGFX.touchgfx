@@ -225,8 +225,8 @@
               "BufferSize": 2
             },
             "Name": "rpm1",
-            "X": 41,
-            "Y": 61,
+            "X": 54,
+            "Y": 63,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -253,8 +253,8 @@
               "BufferSize": 2
             },
             "Name": "rpm2",
-            "X": 87,
-            "Y": 61,
+            "X": 115,
+            "Y": 63,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -281,8 +281,8 @@
               "BufferSize": 2
             },
             "Name": "rpm3",
-            "X": 136,
-            "Y": 61,
+            "X": 173,
+            "Y": 62,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -309,8 +309,8 @@
               "BufferSize": 2
             },
             "Name": "rpm4",
-            "X": 183,
-            "Y": 61,
+            "X": 231,
+            "Y": 62,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -337,8 +337,8 @@
               "BufferSize": 2
             },
             "Name": "rpm5",
-            "X": 232,
-            "Y": 61,
+            "X": 292,
+            "Y": 63,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -365,8 +365,8 @@
               "BufferSize": 2
             },
             "Name": "rpm6",
-            "X": 279,
-            "Y": 61,
+            "X": 349,
+            "Y": 63,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -393,10 +393,10 @@
               "BufferSize": 2
             },
             "Name": "rpm7",
-            "X": 328,
-            "Y": 61,
+            "X": 411,
+            "Y": 62,
             "Width": 18,
-            "Height": 14,
+            "Height": 15,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -421,64 +421,8 @@
               "BufferSize": 2
             },
             "Name": "rpm8",
-            "X": 376,
-            "Y": 61,
-            "Width": 18,
-            "Height": 14,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId19",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId68",
-              "UseBuffer": true,
-              "BufferSize": 2
-            },
-            "Name": "rpm9",
-            "X": 424,
-            "Y": 60,
-            "Width": 18,
-            "Height": 14,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId20",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId69",
-              "UseBuffer": true,
-              "BufferSize": 2
-            },
-            "Name": "rpm10",
-            "X": 463,
-            "Y": 61,
+            "X": 462,
+            "Y": 62,
             "Width": 18,
             "Height": 14,
             "Type": "TextArea",
@@ -861,10 +805,10 @@
             "IndicatorPositionWidth": 478,
             "IndicatorPositionHeight": 55,
             "ProgressRangeMin": 0,
-            "ProgressRangeMax": 10000,
+            "ProgressRangeMax": 8000,
             "ProgressRangeSteps": 0,
             "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 6600,
+            "ProgressInitialValue": 7200,
             "Name": "RPMProgressBar",
             "X": 1,
             "Y": 1,
@@ -1070,14 +1014,6 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId19",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId20",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId21",
         "IsResource": false
       },
@@ -1223,14 +1159,6 @@
       },
       {
         "TextEntryId": "SingleUseId67",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId68",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId69",
         "IsResource": false
       }
     ],

@@ -158,17 +158,17 @@ extern xQueueHandle settingsMessageQ;
 void SecondTask(void const* argument)
 {
 
-	settings_message settings_val = {7000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1};
+	settings_message settings_val = {7000, 1, 2, 3, 4, 5, 6, 7, 8, 0};
 	xQueueSend(settingsMessageQ, &settings_val,0);
 	osDelay(150);
 
-	static const int demo_mode = 0;
+	static const int demo_mode = 1;
 	for(;;)
 	{
 		if(demo_mode)
 		{
 
-			rpm = (rpm >= 10000) ? 0: rpm + 250;
+			rpm = (rpm >= 8000) ? 0: rpm + 100;
 			clt = (clt >= 250) ? -40: clt + 3;
 			map = (map >= 450) ? 1: map + 6;
 			lambda = (lambda >= 1.4) ? 0.6: lambda + 0.05;
@@ -184,7 +184,7 @@ void SecondTask(void const* argument)
 
 		display_values dispVals = {rpm, clt, map, lambda, lambda_targ, vehicle_spd, oil_tmp, oil_press, iat, egt, tps, batt_v};
 	    xQueueSend(messageQ, &dispVals,0);
-		osDelay(150);
+		osDelay(50);
 	}
 }
 

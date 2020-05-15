@@ -30,8 +30,6 @@ typedef struct {
 	int    rpm6;
 	int    rpm7;
 	int    rpm8;
-	int    rpm9;
-	int    rpm10;
 	int has_float;
 } settings_message;
 

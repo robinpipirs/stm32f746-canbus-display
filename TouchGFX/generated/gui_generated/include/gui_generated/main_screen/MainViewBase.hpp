@@ -48,8 +48,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard rpm6;
     touchgfx::TextAreaWithOneWildcard rpm7;
     touchgfx::TextAreaWithOneWildcard rpm8;
-    touchgfx::TextAreaWithOneWildcard rpm9;
-    touchgfx::TextAreaWithOneWildcard rpm10;
     touchgfx::Line line11;
     touchgfx::PainterRGB888 line11Painter;
     touchgfx::TextArea IATDescriptor;
@@ -97,10 +95,6 @@ protected:
     touchgfx::Unicode::UnicodeChar rpm7Buffer[RPM7_SIZE];
     static const uint16_t RPM8_SIZE = 2;
     touchgfx::Unicode::UnicodeChar rpm8Buffer[RPM8_SIZE];
-    static const uint16_t RPM9_SIZE = 2;
-    touchgfx::Unicode::UnicodeChar rpm9Buffer[RPM9_SIZE];
-    static const uint16_t RPM10_SIZE = 2;
-    touchgfx::Unicode::UnicodeChar rpm10Buffer[RPM10_SIZE];
     static const uint16_t IATVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar IATValueBuffer[IATVALUE_SIZE];
     static const uint16_t EGTVALUE_SIZE = 5;
