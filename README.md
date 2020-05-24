@@ -15,7 +15,7 @@ IDE used: STM32CubeIDE 1.3.0.
 Gfx tool: TouchGFX 4.13.0 Designer.
 
 ## Hardware requirements
-1. You need an can bus tranceiver, I have used the SN65HVD23.
+1. You need an can bus tranceiver, I have used the SN65HVD230.
 
 ## Case
 1. 3d printable case is in the making.
