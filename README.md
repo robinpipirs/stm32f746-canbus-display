@@ -14,6 +14,12 @@ It was intended to be an diy solution to a race dash.
 IDE used: STM32CubeIDE 1.3.0.
 Gfx tool: TouchGFX 4.13.0 Designer.
 
+## Hardware requirements
+1. You need an can bus tranceiver, I have used the SN65HVD23.
+
+## Case
+1. 3d printable case is in the making.
+
 ## Getting started developing
 1. Clone project.
 2. Install STM32CubeIDE 1.3.0 and TouchGFX 4.13.0.
