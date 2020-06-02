@@ -1017,7 +1017,7 @@ void SecondTask(void const* argument)
  8000b70:	2096      	movs	r0, #150	; 0x96
  8000b72:	f00b fbad 	bl	800c2d0 <osDelay>
 
-	static const int demo_mode = 1;
+	static const int demo_mode = 0;
 	for(;;)
 	{
 		if(demo_mode)
