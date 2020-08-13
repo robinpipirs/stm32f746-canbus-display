@@ -33,7 +33,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define DEMO_MODE_ENABLED (0)
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -162,10 +162,9 @@ void SecondTask(void const* argument)
 	xQueueSend(settingsMessageQ, &settings_val,0);
 	osDelay(150);
 
-	static const int demo_mode = 0;
 	for(;;)
 	{
-		if(demo_mode)
+		if(DEMO_MODE_ENABLED)
 		{
 
 			rpm = (rpm >= 8000) ? 0: rpm + 100;
@@ -181,6 +180,8 @@ void SecondTask(void const* argument)
 			tps = (tps >= 100) ? 0: tps + 4;
 			batt_v = (batt_v >= 20.0) ? 10.0: batt_v + 0.6;
 		}
+
+		vehicle_spd = 0;
 
 		display_values dispVals = {rpm, clt, map, lambda, lambda_targ, vehicle_spd, oil_tmp, oil_press, iat, egt, tps, batt_v};
 	    xQueueSend(messageQ, &dispVals,0);
@@ -506,10 +507,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   /* Package one */
   if ((RxHeader.StdId == 0x600) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
-	 uint16_t rpm_in = (RxData[0] << 0) | (RxData[1] << 8);
-	 uint8_t tps_in = RxData[2];
-	 uint8_t iat_in = RxData[3];
-	 uint16_t map_in = (RxData[4] << 0) | (RxData[7] << 8);
+	 int rpm_in = (RxData[0] << 0) | (RxData[1] << 8);
+	 int tps_in = RxData[2];
+	 int iat_in = RxData[3];
+	 int map_in = (RxData[4] << 0) | (RxData[7] << 8);
 
 	 rpm = (int)rpm_in;
 	 map = ((int)map_in*1.0f);
