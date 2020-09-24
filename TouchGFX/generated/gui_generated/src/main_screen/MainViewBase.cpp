@@ -15,27 +15,27 @@ MainViewBase::MainViewBase()
     backgroundBox.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
     RpmDescriptor.setXY(228, 138);
-    RpmDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    RpmDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     RpmDescriptor.setLinespacing(0);
     RpmDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
 
     KpaDescriptor.setXY(428, 126);
-    KpaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    KpaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     KpaDescriptor.setLinespacing(0);
     KpaDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
 
     CltDecsriptor.setXY(346, 126);
-    CltDecsriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    CltDecsriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     CltDecsriptor.setLinespacing(0);
     CltDecsriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID40));
 
     LambdaDescriptor.setXY(38, 126);
-    LambdaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    LambdaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     LambdaDescriptor.setLinespacing(0);
     LambdaDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID33));
 
     TrgtDescriptor.setXY(119, 126);
-    TrgtDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    TrgtDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     TrgtDescriptor.setLinespacing(0);
     TrgtDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID32));
 
@@ -121,12 +121,12 @@ MainViewBase::MainViewBase()
     line11.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
     IATDescriptor.setXY(46, 188);
-    IATDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    IATDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     IATDescriptor.setLinespacing(0);
     IATDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID30));
 
     ECTDescriptor.setXY(124, 188);
-    ECTDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    ECTDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     ECTDescriptor.setLinespacing(0);
     ECTDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID31));
 
@@ -145,12 +145,12 @@ MainViewBase::MainViewBase()
     EGTValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID24));
 
     IATDescriptor_1.setXY(343, 188);
-    IATDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    IATDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     IATDescriptor_1.setLinespacing(0);
     IATDescriptor_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID34));
 
     ECTDescriptor_1.setXY(426, 188);
-    ECTDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    ECTDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     ECTDescriptor_1.setLinespacing(0);
     ECTDescriptor_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID35));
 
@@ -169,7 +169,7 @@ MainViewBase::MainViewBase()
     OILPressureValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID38));
 
     IATDescriptor_1_1.setXY(407, 240);
-    IATDescriptor_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    IATDescriptor_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     IATDescriptor_1_1.setLinespacing(0);
     IATDescriptor_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID42));
 
@@ -178,7 +178,7 @@ MainViewBase::MainViewBase()
     TPSProgress.setRange(0, 100);
     TPSProgress.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
     TPSProgress.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_SMALL_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
-    TPSProgress.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 237));
+    TPSProgress.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
     TPSProgress.setValue(60);
 
     line10.setPosition(14, 258, 180, 10);
@@ -208,7 +208,7 @@ MainViewBase::MainViewBase()
     RPMProgressBar.setProgressIndicatorPosition(2, 2, 478, 55);
     RPMProgressBar.setRange(0, 8000);
     RPMProgressBar.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
-    RPMProgressBar.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_GREEN_PINK_FADEPINKPURPLE_SMALL_TRANSPARENT_ID);
+    RPMProgressBar.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_RED_YELLOW_FADEYELLOWRED_SMALL_TRANSPARENT_ID);
     RPMProgressBar.setValue(7200);
     RPMProgressBar.setAnchorAtZero(true);
 

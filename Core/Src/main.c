@@ -33,7 +33,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define DEMO_MODE_ENABLED (0)
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -141,19 +141,39 @@ void StartDefaultTask(void const * argument);
 static int rpm = 4600;
 static int map = 100;
 static int clt = 110;
-static float lambda = 0.77f;
-static float lambda_targ = 0.81f;
-
-static int vehicle_spd = 0;
-static int oil_tmp = 0;
-static float oil_press = 0;
 static int iat = 0;
-static int egt = 0;
 static int tps = 0;
-static float batt_v = 0;
+
+static float lambda = 0.77f;
+static float lambdaTarget = 0.81f;
+static int vehicleSpeed = 0;
+static int oilTemp = 0;
+static float oilPress = 0;
+static float fuelPress = 0;
+static float battVoltage = 0;
+
+static int egt = 0;
 
 extern xQueueHandle messageQ;
 extern xQueueHandle settingsMessageQ;
+
+void updateDemoValues(void)
+{
+	rpm = (rpm >= 8000) ? 0: rpm + 100;
+	clt = (clt >= 250) ? -40: clt + 3;
+	map = (map >= 450) ? 1: map + 6;
+	lambda = (lambda >= 1.4) ? 0.6: lambda + 0.05;
+	lambdaTarget = (lambdaTarget >= 1.4) ? 0.65: lambdaTarget + 0.06;
+	vehicleSpeed = (vehicleSpeed >= 400) ? 0: vehicleSpeed + 6;
+	oilTemp = (oilTemp >= 160) ? 1: oilTemp + 2;
+	oilPress = (oilPress >= 12.0) ? 0.1: oilPress + 0.1;
+	fuelPress = (fuelPress >= 7.0) ? 0.1: fuelPress + 0.1;
+	iat = (iat >= 100) ? 1: iat + 2;
+	egt = (egt >= 760) ? 500: egt +12;
+	tps = (tps >= 100) ? 0: tps + 4;
+	battVoltage = (battVoltage >= 20.0) ? 10.0: battVoltage + 0.6;
+}
+
 
 void SecondTask(void const* argument)
 {
@@ -162,28 +182,15 @@ void SecondTask(void const* argument)
 	xQueueSend(settingsMessageQ, &settings_val,0);
 	osDelay(150);
 
+	static const int demo_mode = 0;
 	for(;;)
 	{
-		if(DEMO_MODE_ENABLED)
+		if(demo_mode)
 		{
-
-			rpm = (rpm >= 8000) ? 0: rpm + 100;
-			clt = (clt >= 250) ? -40: clt + 3;
-			map = (map >= 450) ? 1: map + 6;
-			lambda = (lambda >= 1.4) ? 0.6: lambda + 0.05;
-			lambda_targ = (lambda_targ >= 1.4) ? 0.65: lambda_targ + 0.06;
-			vehicle_spd = (vehicle_spd >= 400) ? 0: vehicle_spd + 6;
-			oil_tmp = (oil_tmp >= 160) ? 1: oil_tmp + 2;
-			oil_press = (oil_press >= 12.0) ? 0.1: oil_press + 0.1;
-			iat = (iat >= 100) ? 1: iat + 2;
-			egt = (egt >= 760) ? 500: egt +12;
-			tps = (tps >= 100) ? 0: tps + 4;
-			batt_v = (batt_v >= 20.0) ? 10.0: batt_v + 0.6;
+			updateDemoValues();
 		}
 
-		vehicle_spd = 0;
-
-		display_values dispVals = {rpm, clt, map, lambda, lambda_targ, vehicle_spd, oil_tmp, oil_press, iat, egt, tps, batt_v};
+		display_values dispVals = {rpm, clt, map, lambda, lambdaTarget, vehicleSpeed, oilTemp, oilPress, fuelPress, iat, egt, tps, battVoltage};
 	    xQueueSend(messageQ, &dispVals,0);
 		osDelay(50);
 	}
@@ -488,6 +495,86 @@ static void MX_CAN1_Init(void)
 
 }
 
+int getLittleEndianIntegerFromByteArray(uint8_t* data, int startIndex)
+{
+    return (data[startIndex + 3] << 24)	\
+         | (data[startIndex + 2] << 16)	\
+         | (data[startIndex + 1] << 8)	\
+         | data[startIndex];
+}
+
+int getRpmFromCanData(uint8_t* data, int startIndex)
+{
+	int rpm = (int)(data[startIndex] << 0) | (data[startIndex+1] << 8);
+	return rpm;
+}
+
+int getTpsFromCanData(uint8_t* data, int startIndex)
+{
+	float tmpTps = (float)data[startIndex];
+	tmpTps = tmpTps*0.5f;
+
+	return (int)tmpTps;
+}
+
+int getVehicleSpeedFromCanData(uint8_t* data, int startIndex)
+{
+	int vehicleSpd = (data[startIndex] << 0) | (data[startIndex+1] << 8);
+	return vehicleSpd;
+}
+
+int getOilTempFromCanData(uint8_t* data, int startIndex)
+{
+	return data[startIndex];
+}
+
+float getOilPressFromCanData(uint8_t* data, int startIndex)
+{
+	float tmpOilPress = data[startIndex];
+	tmpOilPress = tmpOilPress * 0.0625f;
+	return tmpOilPress;
+}
+
+float getFuelPressFromCanData(uint8_t* data, int startIndex)
+{
+	float tmpFuelPress = data[startIndex];
+	tmpFuelPress = tmpFuelPress * 0.03125f;
+	return tmpFuelPress;
+}
+
+int getCltFromCanData(uint8_t* data, int startIndex)
+{
+	int tmpClt = (data[6] << 0) | (data[7] << 8);
+	return tmpClt;
+}
+
+float getBattVoltageFromCanData(uint8_t* data, int startIndex)
+{
+	 float tmpBattVoltage = (data[startIndex] << 0) | (data[startIndex+1] << 8);
+	 tmpBattVoltage = tmpBattVoltage*0.027f;
+	 return tmpBattVoltage;
+}
+
+float getLambdaFromCanData(uint8_t* data, int startIndex)
+{
+	 float tmpLambda = data[startIndex];
+	 tmpLambda = tmpLambda*0.0078125f;
+	 return tmpLambda;
+}
+
+float getEgtFromCanData(uint8_t* data, int startIndex)
+{
+	 float tmpEgt = (data[startIndex] << 0) | (data[startIndex + 1] << 8);
+	 return tmpEgt;
+}
+
+float getLambdaTargetFromCanData(uint8_t* data, int startIndex)
+{
+	float tmpLambdaTarget = data[startIndex];
+	tmpLambdaTarget = tmpLambdaTarget / 100.0f;
+	return tmpLambdaTarget;
+}
+
 
 /**
   * @brief  Rx Fifo 0 message pending callback
@@ -507,55 +594,35 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   /* Package one */
   if ((RxHeader.StdId == 0x600) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
-	 int rpm_in = (RxData[0] << 0) | (RxData[1] << 8);
-	 int tps_in = RxData[2];
-	 int iat_in = RxData[3];
-	 int map_in = (RxData[4] << 0) | (RxData[7] << 8);
-
-	 rpm = (int)rpm_in;
-	 map = ((int)map_in*1.0f);
-	 iat = (int)iat_in;
-	 tps = (int)(((float)tps_in)*0.5f);
-	 (void)map;
-	 (void)iat;
+	 rpm = getRpmFromCanData(RxData,0);
+	 tps = getTpsFromCanData(RxData,2);
+	 iat = (int)RxData[3];
+	 map = getLittleEndianIntegerFromByteArray(RxData,4);
   }
 
   if ((RxHeader.StdId == 0x602) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
-
-	 uint16_t vehicle_spd_in = (RxData[1] << 0) | (RxData[2] << 8);
-	 uint8_t oil_tmp_in = RxData[3];
-	 uint8_t oil_press_in = RxData[4];
-	 uint8_t fuel_press_in = RxData[5];
-	 uint16_t clt_in = (RxData[6] << 0) | (RxData[7] << 8);
-
-	 vehicle_spd = ((int)vehicle_spd_in)*1;
-	 oil_tmp = ((int)oil_tmp_in) * 1;
-	 oil_press = ((int)oil_press_in) * 0.0625f;
-	 clt = ((int)clt_in) * 1;
+	 oilTemp = getOilTempFromCanData(RxData,3);
+	 oilPress = getOilPressFromCanData(RxData,4);
+	 fuelPress = getFuelPressFromCanData(RxData,5);
+	 clt = getCltFromCanData(RxData,6);
   }
 
   if ((RxHeader.StdId == 0x603) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
-	 uint8_t lambda_in = RxData[2];
-	 uint16_t egt_1_in = (RxData[4] << 0) | (RxData[5] << 8);
-	 lambda = ((float)lambda_in)*0.0078125f;
-	 egt = (int)egt_1_in;
-   }
+	 lambda = getLambdaFromCanData(RxData,2);
+	 egt = getEgtFromCanData(RxData, 4);
+  }
 
   if ((RxHeader.StdId == 0x604) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
-	 uint16_t batt_in = (RxData[2] << 0) | (RxData[3] << 8);
-	 float battery_voltage = ((float)batt_in)*0.027f;
-	 batt_v = battery_voltage;
-	 (void)batt_v;
+	 battVoltage = getBattVoltageFromCanData(RxData, 2);
   }
 
   if ((RxHeader.StdId == 0x500) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
-    {
-  	 uint16_t lambda_targ_in = RxData[7];
-  	 lambda_targ = lambda_targ_in / 100.0f;
-    }
+  {
+	 lambdaTarget = getLambdaTargetFromCanData(RxData,7);
+  }
 }
 
 /**
