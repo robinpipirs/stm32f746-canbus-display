@@ -192,7 +192,7 @@ void SecondTask(void const* argument)
 
 		display_values dispVals = {rpm, clt, map, lambda, lambdaTarget, vehicleSpeed, oilTemp, oilPress, fuelPress, iat, egt, tps, battVoltage};
 	    xQueueSend(messageQ, &dispVals,0);
-		osDelay(50);
+		osDelay(20);
 	}
 }
 
