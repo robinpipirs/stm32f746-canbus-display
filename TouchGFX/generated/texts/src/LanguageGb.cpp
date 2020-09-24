@@ -10,9 +10,9 @@ TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
 {
     7, // T_SingleUseId7
-    40, // T_SingleUseId8
+    46, // T_SingleUseId8
     7, // T_SingleUseId9
-    45, // T_SingleUseId10
+    41, // T_SingleUseId10
     7, // T_SingleUseId11
     7, // T_SingleUseId12
     7, // T_SingleUseId13
@@ -21,41 +21,35 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
     7, // T_SingleUseId16
     7, // T_SingleUseId17
     7, // T_SingleUseId18
-    60, // T_SingleUseId21
     7, // T_SingleUseId22
-    108, // T_SingleUseId23
-    7, // T_SingleUseId24
-    84, // T_SingleUseId25
-    92, // T_SingleUseId30
-    100, // T_SingleUseId31
-    29, // T_SingleUseId32
-    23, // T_SingleUseId33
-    16, // T_SingleUseId34
-    9, // T_SingleUseId35
+    92, // T_SingleUseId23
+    72, // T_SingleUseId30
+    30, // T_SingleUseId32
+    24, // T_SingleUseId33
+    9, // T_SingleUseId34
+    17, // T_SingleUseId35
     7, // T_SingleUseId36
-    104, // T_SingleUseId37
-    7, // T_SingleUseId38
-    76, // T_SingleUseId40
-    68, // T_SingleUseId41
-    72, // T_SingleUseId42
+    68, // T_SingleUseId40
+    56, // T_SingleUseId41
+    60, // T_SingleUseId42
     0, // T_SingleUseId44
-    55, // T_SingleUseId45
+    51, // T_SingleUseId45
     4, // T_SingleUseId46
-    50, // T_SingleUseId47
-    80, // T_SingleUseId50
+    36, // T_SingleUseId47
+    64, // T_SingleUseId50
     7, // T_SingleUseId53
-    88, // T_SingleUseId54
     7, // T_SingleUseId55
-    96, // T_SingleUseId56
-    35, // T_SingleUseId57
-    7, // T_SingleUseId58
-    64, // T_SingleUseId59
-    58, // T_SingleUseId60
-    113, // T_SingleUseId61
-    115, // T_SingleUseId62
-    111, // T_SingleUseId63
-    38, // T_SingleUseId64
-    117, // T_SingleUseId65
-    48, // T_SingleUseId66
-    119  // T_SingleUseId67
+    54, // T_SingleUseId60
+    101, // T_SingleUseId61
+    99, // T_SingleUseId62
+    95, // T_SingleUseId63
+    103, // T_SingleUseId64
+    97, // T_SingleUseId65
+    44, // T_SingleUseId66
+    90, // T_SingleUseId67
+    7, // T_SingleUseId38
+    84, // T_SingleUseId68
+    80, // T_SingleUseId69
+    76, // T_SingleUseId70
+    88  // T_SingleUseId71
 };

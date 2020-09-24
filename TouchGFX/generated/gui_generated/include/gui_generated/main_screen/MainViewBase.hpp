@@ -32,7 +32,6 @@ protected:
      * Member Declarations
      */
     touchgfx::Box backgroundBox;
-    touchgfx::TextArea RpmDescriptor;
     touchgfx::TextArea KpaDescriptor;
     touchgfx::TextArea CltDecsriptor;
     touchgfx::TextArea LambdaDescriptor;
@@ -51,13 +50,11 @@ protected:
     touchgfx::Line line11;
     touchgfx::PainterRGB888 line11Painter;
     touchgfx::TextArea IATDescriptor;
-    touchgfx::TextArea ECTDescriptor;
     touchgfx::TextAreaWithOneWildcard IATValue;
-    touchgfx::TextAreaWithOneWildcard EGTValue;
-    touchgfx::TextArea IATDescriptor_1;
+    touchgfx::TextArea FuelPressureDescriptor;
     touchgfx::TextArea ECTDescriptor_1;
-    touchgfx::TextAreaWithOneWildcard OILTempValue;
-    touchgfx::TextAreaWithOneWildcard OILPressureValue;
+    touchgfx::TextAreaWithOneWildcard OilPressureValue;
+    touchgfx::TextAreaWithOneWildcard FuelPressureValue;
     touchgfx::TextArea IATDescriptor_1_1;
     touchgfx::BoxProgress TPSProgress;
     touchgfx::Line line10;
@@ -70,7 +67,6 @@ protected:
     touchgfx::TextArea CltValue_1_1;
     touchgfx::TextAreaWithOneWildcard CLTValue;
     touchgfx::TextAreaWithOneWildcard MAPValue;
-    touchgfx::TextAreaWithOneWildcard KMHValue;
 
     /*
      * Wildcard Buffers
@@ -97,12 +93,10 @@ protected:
     touchgfx::Unicode::UnicodeChar rpm8Buffer[RPM8_SIZE];
     static const uint16_t IATVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar IATValueBuffer[IATVALUE_SIZE];
-    static const uint16_t EGTVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar EGTValueBuffer[EGTVALUE_SIZE];
-    static const uint16_t OILTEMPVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar OILTempValueBuffer[OILTEMPVALUE_SIZE];
     static const uint16_t OILPRESSUREVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar OILPressureValueBuffer[OILPRESSUREVALUE_SIZE];
+    touchgfx::Unicode::UnicodeChar OilPressureValueBuffer[OILPRESSUREVALUE_SIZE];
+    static const uint16_t FUELPRESSUREVALUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar FuelPressureValueBuffer[FUELPRESSUREVALUE_SIZE];
     static const uint16_t BATTERYVOLTAGE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar BatteryVoltageBuffer[BATTERYVOLTAGE_SIZE];
     static const uint16_t RPMVALUE_SIZE = 5;
@@ -111,8 +105,6 @@ protected:
     touchgfx::Unicode::UnicodeChar CLTValueBuffer[CLTVALUE_SIZE];
     static const uint16_t MAPVALUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar MAPValueBuffer[MAPVALUE_SIZE];
-    static const uint16_t KMHVALUE_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar KMHValueBuffer[KMHVALUE_SIZE];
 
 private:
 

@@ -29,6 +29,7 @@ void MainView::tearDownScreen()
 static colortype getBlackColor()
 {
 	colortype black_color = touchgfx::Color::getColorFrom24BitRGB(0,0,0);
+	return black_color;
 }
 
 static colortype getColorFromRevLimit()
@@ -66,7 +67,7 @@ void MainView::updateSettings(uint8_t* settings)
 {
 	settings_message* new_settings = (settings_message*) settings;
 
-	rev_limit = (int)new_settings->rpm_limit;
+	rev_limit = (int)new_settings->rpmLimit;
 
 	RPMProgressBar.setRange(0, (int)(new_settings->rpm8*1000.0f), 0, 0);
 	RPMProgressBar.invalidate();
@@ -132,27 +133,21 @@ void MainView::updateVal(uint8_t* newValue)
 	Unicode::snprintfFloat(LambdaValueBuffer, LAMBDAVALUE_SIZE, "%.2f",values->lambda);
 	LambdaValue.invalidate();
 
-	Unicode::snprintfFloat(TrgtValueBuffer, TRGTVALUE_SIZE, "%.2f",values->lambda_trgt);
+	Unicode::snprintfFloat(TrgtValueBuffer, TRGTVALUE_SIZE, "%.2f",values->lambdaTarget);
 	TrgtValue.invalidate();
 
-	Unicode::snprintf(KMHValueBuffer, KMHVALUE_SIZE, "%d",values->vehicle_spd);
-	KMHValue.invalidate();
+	Unicode::snprintfFloat(OilPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%.1f",values->oilPressure);
+	OilPressureValue.invalidate();
 
-	Unicode::snprintfFloat(OILPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%.1f",values->oil_press);
-	OILPressureValue.invalidate();
-
-	Unicode::snprintf(OILTempValueBuffer, OILTEMPVALUE_SIZE, "%d",values->oil_tmp);
-	OILTempValue.invalidate();
+	Unicode::snprintfFloat(FuelPressureValueBuffer, FUELPRESSUREVALUE_SIZE, "%.1f",values->fuelPressure);
+	FuelPressureValue.invalidate();
 
 	Unicode::snprintf(IATValueBuffer, IATVALUE_SIZE, "%d",values->iat);
 	IATValue.invalidate();
 
-	Unicode::snprintf(EGTValueBuffer, EGTVALUE_SIZE, "%d",values->egt);
-	EGTValue.invalidate();
-
 	TPSProgress.setValue(values->tps);
 	RPMProgressBar.invalidate();
 
-	Unicode::snprintfFloat(BatteryVoltageBuffer, BATTERYVOLTAGE_SIZE, "%.2f",values->batt_v);
+	Unicode::snprintfFloat(BatteryVoltageBuffer, BATTERYVOLTAGE_SIZE, "%.2f",values->battVoltage);
 	BatteryVoltage.invalidate();
 }

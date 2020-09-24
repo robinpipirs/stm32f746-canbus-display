@@ -10,18 +10,19 @@ typedef struct {
    int    clt;
    int    map;
    float  lambda;
-   float  lambda_trgt;
-   int	  vehicle_spd;
-   int    oil_tmp;
-   float    oil_press;
+   float  lambdaTarget;
+   int	  vehicleSpeed;
+   int    oilTemp;
+   float  oilPressure;
+   float  fuelPressure;
    int    iat;
    int    egt;
    int	  tps;
-   float	  batt_v;
+   float  battVoltage;
 } display_values;
 
 typedef struct {
-	int    rpm_limit;
+	int    rpmLimit;
 	int    rpm1;
 	int    rpm2;
 	int    rpm3;
@@ -30,7 +31,7 @@ typedef struct {
 	int    rpm6;
 	int    rpm7;
 	int    rpm8;
-	int has_float;
+	int    hasFloat;
 } settings_message;
 
 

@@ -11,42 +11,37 @@ MainViewBase::MainViewBase()
 
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
-    backgroundBox.setPosition(0, 0, 800, 480);
+    backgroundBox.setPosition(0, 1, 800, 480);
     backgroundBox.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
-    RpmDescriptor.setXY(228, 138);
-    RpmDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
-    RpmDescriptor.setLinespacing(0);
-    RpmDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
-
-    KpaDescriptor.setXY(428, 126);
-    KpaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    KpaDescriptor.setXY(292, 129);
+    KpaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     KpaDescriptor.setLinespacing(0);
     KpaDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
 
-    CltDecsriptor.setXY(346, 126);
-    CltDecsriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    CltDecsriptor.setXY(174, 129);
+    CltDecsriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     CltDecsriptor.setLinespacing(0);
     CltDecsriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID40));
 
-    LambdaDescriptor.setXY(38, 126);
-    LambdaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    LambdaDescriptor.setXY(49, 129);
+    LambdaDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     LambdaDescriptor.setLinespacing(0);
     LambdaDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID33));
 
-    TrgtDescriptor.setXY(119, 126);
-    TrgtDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    TrgtDescriptor.setXY(50, 219);
+    TrgtDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     TrgtDescriptor.setLinespacing(0);
     TrgtDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID32));
 
-    LambdaValue.setPosition(24, 91, 60, 35);
+    LambdaValue.setPosition(15, 77, 100, 47);
     LambdaValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     LambdaValue.setLinespacing(0);
     Unicode::snprintf(LambdaValueBuffer, LAMBDAVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID10).getText());
     LambdaValue.setWildcard(LambdaValueBuffer);
     LambdaValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID9));
 
-    TrgtValue.setPosition(104, 91, 60, 35);
+    TrgtValue.setPosition(15, 170, 100, 47);
     TrgtValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     TrgtValue.setLinespacing(0);
     Unicode::snprintf(TrgtValueBuffer, TRGTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID8).getText());
@@ -120,56 +115,44 @@ MainViewBase::MainViewBase()
     line11.setLineWidth(2);
     line11.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
-    IATDescriptor.setXY(46, 188);
-    IATDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    IATDescriptor.setXY(413, 129);
+    IATDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     IATDescriptor.setLinespacing(0);
     IATDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID30));
 
-    ECTDescriptor.setXY(124, 188);
-    ECTDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
-    ECTDescriptor.setLinespacing(0);
-    ECTDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID31));
-
-    IATValue.setPosition(26, 153, 60, 35);
+    IATValue.setPosition(371, 77, 100, 47);
     IATValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     IATValue.setLinespacing(0);
     Unicode::snprintf(IATValueBuffer, IATVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID23).getText());
     IATValue.setWildcard(IATValueBuffer);
     IATValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID22));
 
-    EGTValue.setPosition(104, 153, 60, 35);
-    EGTValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    EGTValue.setLinespacing(0);
-    Unicode::snprintf(EGTValueBuffer, EGTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID25).getText());
-    EGTValue.setWildcard(EGTValueBuffer);
-    EGTValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID24));
+    FuelPressureDescriptor.setXY(287, 217);
+    FuelPressureDescriptor.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
+    FuelPressureDescriptor.setLinespacing(0);
+    FuelPressureDescriptor.setTypedText(touchgfx::TypedText(T_SINGLEUSEID34));
 
-    IATDescriptor_1.setXY(343, 188);
-    IATDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
-    IATDescriptor_1.setLinespacing(0);
-    IATDescriptor_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID34));
-
-    ECTDescriptor_1.setXY(426, 188);
-    ECTDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    ECTDescriptor_1.setXY(168, 219);
+    ECTDescriptor_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     ECTDescriptor_1.setLinespacing(0);
     ECTDescriptor_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID35));
 
-    OILTempValue.setPosition(328, 153, 60, 35);
-    OILTempValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    OILTempValue.setLinespacing(0);
-    Unicode::snprintf(OILTempValueBuffer, OILTEMPVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID37).getText());
-    OILTempValue.setWildcard(OILTempValueBuffer);
-    OILTempValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID36));
+    OilPressureValue.setPosition(133, 170, 100, 47);
+    OilPressureValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    OilPressureValue.setLinespacing(0);
+    Unicode::snprintf(OilPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID68).getText());
+    OilPressureValue.setWildcard(OilPressureValueBuffer);
+    OilPressureValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID36));
 
-    OILPressureValue.setPosition(411, 153, 60, 35);
-    OILPressureValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    OILPressureValue.setLinespacing(0);
-    Unicode::snprintf(OILPressureValueBuffer, OILPRESSUREVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID57).getText());
-    OILPressureValue.setWildcard(OILPressureValueBuffer);
-    OILPressureValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID38));
+    FuelPressureValue.setPosition(252, 170, 100, 47);
+    FuelPressureValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    FuelPressureValue.setLinespacing(0);
+    Unicode::snprintf(FuelPressureValueBuffer, FUELPRESSUREVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID71).getText());
+    FuelPressureValue.setWildcard(FuelPressureValueBuffer);
+    FuelPressureValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID38));
 
     IATDescriptor_1_1.setXY(407, 240);
-    IATDescriptor_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    IATDescriptor_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     IATDescriptor_1_1.setLinespacing(0);
     IATDescriptor_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID42));
 
@@ -178,7 +161,7 @@ MainViewBase::MainViewBase()
     TPSProgress.setRange(0, 100);
     TPSProgress.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
     TPSProgress.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_SMALL_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
-    TPSProgress.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 220, 0));
+    TPSProgress.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 169));
     TPSProgress.setValue(60);
 
     line10.setPosition(14, 258, 180, 10);
@@ -208,7 +191,7 @@ MainViewBase::MainViewBase()
     RPMProgressBar.setProgressIndicatorPosition(2, 2, 478, 55);
     RPMProgressBar.setRange(0, 8000);
     RPMProgressBar.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
-    RPMProgressBar.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_RED_YELLOW_FADEYELLOWRED_SMALL_TRANSPARENT_ID);
+    RPMProgressBar.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_GREEN_PINK_FADEPINKPURPLE_SMALL_TRANSPARENT_ID);
     RPMProgressBar.setValue(7200);
     RPMProgressBar.setAnchorAtZero(true);
 
@@ -224,29 +207,21 @@ MainViewBase::MainViewBase()
     CltValue_1_1.setLinespacing(0);
     CltValue_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID50));
 
-    CLTValue.setPosition(328, 91, 60, 35);
+    CLTValue.setPosition(133, 79, 100, 47);
     CLTValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     CLTValue.setLinespacing(0);
-    Unicode::snprintf(CLTValueBuffer, CLTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID54).getText());
+    Unicode::snprintf(CLTValueBuffer, CLTVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID69).getText());
     CLTValue.setWildcard(CLTValueBuffer);
     CLTValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID53));
 
-    MAPValue.setPosition(409, 91, 60, 35);
+    MAPValue.setPosition(252, 79, 100, 47);
     MAPValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     MAPValue.setLinespacing(0);
-    Unicode::snprintf(MAPValueBuffer, MAPVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID56).getText());
+    Unicode::snprintf(MAPValueBuffer, MAPVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID70).getText());
     MAPValue.setWildcard(MAPValueBuffer);
     MAPValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID55));
 
-    KMHValue.setPosition(185, 76, 110, 69);
-    KMHValue.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    KMHValue.setLinespacing(0);
-    Unicode::snprintf(KMHValueBuffer, KMHVALUE_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID59).getText());
-    KMHValue.setWildcard(KMHValueBuffer);
-    KMHValue.setTypedText(touchgfx::TypedText(T_SINGLEUSEID58));
-
     add(backgroundBox);
-    add(RpmDescriptor);
     add(KpaDescriptor);
     add(CltDecsriptor);
     add(LambdaDescriptor);
@@ -264,13 +239,11 @@ MainViewBase::MainViewBase()
     add(rpm8);
     add(line11);
     add(IATDescriptor);
-    add(ECTDescriptor);
     add(IATValue);
-    add(EGTValue);
-    add(IATDescriptor_1);
+    add(FuelPressureDescriptor);
     add(ECTDescriptor_1);
-    add(OILTempValue);
-    add(OILPressureValue);
+    add(OilPressureValue);
+    add(FuelPressureValue);
     add(IATDescriptor_1_1);
     add(TPSProgress);
     add(line10);
@@ -281,7 +254,6 @@ MainViewBase::MainViewBase()
     add(CltValue_1_1);
     add(CLTValue);
     add(MAPValue);
-    add(KMHValue);
 }
 
 void MainViewBase::setupScreen()
