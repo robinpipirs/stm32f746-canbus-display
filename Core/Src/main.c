@@ -495,12 +495,10 @@ static void MX_CAN1_Init(void)
 
 }
 
-int getLittleEndianIntegerFromByteArray(uint8_t* data, int startIndex)
+int getMapFromCanData(uint8_t* data, int startIndex)
 {
-    return (data[startIndex + 3] << 24)	\
-         | (data[startIndex + 2] << 16)	\
-         | (data[startIndex + 1] << 8)	\
-         | data[startIndex];
+	int map = (int)(data[startIndex] << 0) | (data[startIndex+1] << 8);
+	return map;
 }
 
 int getRpmFromCanData(uint8_t* data, int startIndex)
@@ -597,7 +595,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	 rpm = getRpmFromCanData(RxData,0);
 	 tps = getTpsFromCanData(RxData,2);
 	 iat = (int)RxData[3];
-	 map = getLittleEndianIntegerFromByteArray(RxData,4);
+	 map = getMapFromCanData(RxData,4);
   }
 
   if ((RxHeader.StdId == 0x602) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
