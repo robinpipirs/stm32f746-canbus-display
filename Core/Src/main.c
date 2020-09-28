@@ -497,13 +497,13 @@ static void MX_CAN1_Init(void)
 
 int getMapFromCanData(uint8_t* data, int startIndex)
 {
-	int map = (data[startIndex] << 0) | (data[startIndex+1] << 8);
+	int map = (data[startIndex+1] << 8) | data[startIndex];
 	return map;
 }
 
 int getRpmFromCanData(uint8_t* data, int startIndex)
 {
-	int rpm = (int)(data[startIndex] << 0) | (data[startIndex+1] << 8);
+	int rpm = (data[startIndex+1] << 8) | data[startIndex];
 	return rpm;
 }
 
@@ -517,7 +517,7 @@ int getTpsFromCanData(uint8_t* data, int startIndex)
 
 int getVehicleSpeedFromCanData(uint8_t* data, int startIndex)
 {
-	int vehicleSpd = (data[startIndex] << 0) | (data[startIndex+1] << 8);
+	int vehicleSpd = (data[startIndex+1] << 8) | data[startIndex];
 	return vehicleSpd;
 }
 
