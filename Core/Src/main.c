@@ -535,9 +535,9 @@ float getOilPressFromCanData(uint8_t* data, int startIndex)
 
 float getFuelPressFromCanData(uint8_t* data, int startIndex)
 {
-	float tmpFuelPress = (float)data[startIndex];
-	tmpFuelPress = tmpFuelPress * 0.03125f;
-	return tmpFuelPress;
+	uint8_t tmpFuelPress = data[startIndex];
+	float fuelPress = tmpFuelPress * 0.03125f;
+	return fuelPress;
 }
 
 int getCltFromCanData(uint8_t* data, int startIndex)
@@ -548,7 +548,7 @@ int getCltFromCanData(uint8_t* data, int startIndex)
 
 float getBattVoltageFromCanData(uint8_t* data, int startIndex)
 {
-	 float tmpBattVoltage = (float)(data[startIndex] << 0) | (data[startIndex+1] << 8);
+	 float tmpBattVoltage = (data[startIndex+1] << 8) | data[startIndex];
 	 tmpBattVoltage = tmpBattVoltage*0.027f;
 	 return tmpBattVoltage;
 }
@@ -562,7 +562,7 @@ float getLambdaFromCanData(uint8_t* data, int startIndex)
 
 float getEgtFromCanData(uint8_t* data, int startIndex)
 {
-	 float tmpEgt = (float)(data[startIndex] << 0) | (data[startIndex + 1] << 8);
+	 float tmpEgt = (data[startIndex + 1] << 8) | data[startIndex];
 	 return tmpEgt;
 }
 
@@ -602,7 +602,6 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   {
 	 oilTemp = getOilTempFromCanData(RxData,3);
 	 oilPress = getOilPressFromCanData(RxData,4);
-	 fuelPress = getFuelPressFromCanData(RxData,5);
 	 clt = getCltFromCanData(RxData,6);
   }
 
@@ -619,6 +618,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 
   if ((RxHeader.StdId == 0x500) && (RxHeader.IDE == CAN_ID_STD) && (RxHeader.DLC == 8))
   {
+	  fuelPress = getFuelPressFromCanData(RxData,1);
 	 lambdaTarget = getLambdaTargetFromCanData(RxData,7);
   }
 }
