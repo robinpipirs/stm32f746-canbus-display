@@ -497,7 +497,7 @@ static void MX_CAN1_Init(void)
 
 int getMapFromCanData(uint8_t* data, int startIndex)
 {
-	int map = (int)(data[startIndex] << 0) | (data[startIndex+1] << 8);
+	int map = (data[startIndex] << 0) | (data[startIndex+1] << 8);
 	return map;
 }
 
@@ -528,14 +528,14 @@ int getOilTempFromCanData(uint8_t* data, int startIndex)
 
 float getOilPressFromCanData(uint8_t* data, int startIndex)
 {
-	float tmpOilPress = data[startIndex];
+	float tmpOilPress = (float)data[startIndex];
 	tmpOilPress = tmpOilPress * 0.0625f;
 	return tmpOilPress;
 }
 
 float getFuelPressFromCanData(uint8_t* data, int startIndex)
 {
-	float tmpFuelPress = data[startIndex];
+	float tmpFuelPress = (float)data[startIndex];
 	tmpFuelPress = tmpFuelPress * 0.03125f;
 	return tmpFuelPress;
 }
@@ -548,27 +548,27 @@ int getCltFromCanData(uint8_t* data, int startIndex)
 
 float getBattVoltageFromCanData(uint8_t* data, int startIndex)
 {
-	 float tmpBattVoltage = (data[startIndex] << 0) | (data[startIndex+1] << 8);
+	 float tmpBattVoltage = (float)(data[startIndex] << 0) | (data[startIndex+1] << 8);
 	 tmpBattVoltage = tmpBattVoltage*0.027f;
 	 return tmpBattVoltage;
 }
 
 float getLambdaFromCanData(uint8_t* data, int startIndex)
 {
-	 float tmpLambda = data[startIndex];
+	 float tmpLambda = (float)data[startIndex];
 	 tmpLambda = tmpLambda*0.0078125f;
 	 return tmpLambda;
 }
 
 float getEgtFromCanData(uint8_t* data, int startIndex)
 {
-	 float tmpEgt = (data[startIndex] << 0) | (data[startIndex + 1] << 8);
+	 float tmpEgt = (float)(data[startIndex] << 0) | (data[startIndex + 1] << 8);
 	 return tmpEgt;
 }
 
 float getLambdaTargetFromCanData(uint8_t* data, int startIndex)
 {
-	float tmpLambdaTarget = data[startIndex];
+	float tmpLambdaTarget = (float)data[startIndex];
 	tmpLambdaTarget = tmpLambdaTarget / 100.0f;
 	return tmpLambdaTarget;
 }
