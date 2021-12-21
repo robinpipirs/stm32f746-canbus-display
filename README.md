@@ -11,6 +11,8 @@ TouchGFX.
 This project is built on the stm32f746g-discovery board.
 It was intended to be an diy solution to a race dash.
 
+### Canbus bitrate is 500k not 250!
+
 IDE used: STM32CubeIDE 1.3.0.
 Gfx tool: TouchGFX 4.13.0 Designer.
 
@@ -39,5 +41,6 @@ Gfx tool: TouchGFX 4.13.0 Designer.
 - Do not be afraid to experiment. Have fun!
 
 ## Ecumaster emu black settings
-Image bellow shows the can settings used for the display to work with ecumaster.      
+Image bellow shows the can settings used for the display to work with ecumaster.     
+### Canbus bitrate is 500k not 250!
 ![ecumaster_can_settings](ecumaster_bl_can_settings_1.png)      
