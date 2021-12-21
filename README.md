@@ -17,6 +17,8 @@ Gfx tool: TouchGFX 4.13.0 Designer.
 ## Hardware requirements
 ![cantranceiver](can_tranceiver_connection.png)
 1. You need an can bus tranceiver, I have used the SN65HVD230.
+2. Can TX is connected  to PB9 on mcu.
+3. Can RX is connected to PB8 on mcu.
 
 ## Case
 1. 3d printable case is in the making.
